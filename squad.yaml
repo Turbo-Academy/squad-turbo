@@ -1,0 +1,77 @@
+name: Squad Turbo
+version: "1.0.0"
+description: >
+  Squad de marketing digital da Turbo Academy, especializado em
+  lançamento pago semanal (Método 5+1), Funil 8 (low-ticket) e
+  funis digitais. Expert: Leo Tabari.
+
+entry_agent: estrategista-turbo
+expert: Leo Tabari
+empresa: Turbo Academy
+
+stats:
+  agents: 7
+  skills: 9
+  workflows: 3
+
+agents:
+  - id: estrategista-turbo
+    tier: 0
+    role: "Orquestrador + Triage"
+  - id: copywriter-turbo
+    tier: 1
+    role: "Copy + Páginas + Scripts + Modelos (Workshop/5+1)"
+  - id: criativo-turbo
+    tier: 1
+    role: "Direção criativa + Slides + Brandbook + Criativos"
+  - id: social-turbo
+    tier: 1
+    role: "Social media + Conteúdo orgânico + Reels"
+  - id: trafego-turbo
+    tier: 2
+    role: "Tráfego pago Meta/Google"
+  - id: automacao-turbo
+    tier: 2
+    role: "Automações n8n + ManyChat + Mensageria"
+  - id: cs-turbo
+    tier: 3
+    role: "Customer Success + Pós-venda"
+
+metodologias:
+  - name: "Método 5+1"
+    description: "5 aulas (seg-sex) + pitch (domingo). Diferencial Turbo Academy."
+  - name: "Lançamento Pago Semanal"
+    description: "Modelo gravado, ROAS 1 na captação, evento pago semanal."
+  - name: "Funil 8"
+    description: "Método low-ticket proprietário da Turbo Academy."
+
+skills:
+  shared:
+    - lancamento-pago-semanal
+    - criador-paginas-low-ticket
+    - criador-criativos
+    - criador-reels
+    - mensageria-lancamento
+    - stories-expert
+    - designer-senior
+  squad_specific:
+    - gerador-slides-turbo
+    - estruturador-evento-turbo
+  ui_ux_pro_max_suite:
+    note: "Pacote UI UX Pro Max v2.0 — escopo: @criativo-turbo"
+    scope: squad-local
+    owner_agent: criativo-turbo
+    path: ~/.claude/squads/squad-turbo/skills/
+    skills:
+      - ui-ux-pro-max
+      - design
+      - design-system
+      - brand
+      - ui-styling
+      - banner-design
+      - slides-uipm
+
+settings:
+  language: "pt-BR"
+  independent: true
+  parent_squad: null

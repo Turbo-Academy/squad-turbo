@@ -1,0 +1,46 @@
+squad: squad-turbo
+version: "1.0.0"
+
+expert:
+  name: "Leo Tabari"
+  empresa: "Turbo Academy"
+  nicho: "Lançamentos pagos para infoprodutores"
+  autoridade: "+200 lançamentos, +R$100M em faturamento"
+
+customization:
+  estrategista: "Estrategista Turbo"
+  copywriter: "Copywriter Turbo"
+  criativo: "Criativo Turbo"
+  social: "Social Turbo"
+  trafego: "Tráfego Turbo"
+  automacao: "Automação Turbo"
+  cs: "CS Turbo"
+
+paths:
+  agents: "agents/"
+  skills: "skills/"
+  tasks: "tasks/"
+  workflows: "workflows/"
+  templates: "templates/"
+  checklists: "checklists/"
+  data: "data/"
+  shared_skills: "~/.claude/emb/skills/"
+
+model_assignment:
+  estrategista-turbo: "claude-opus-4-6"
+  copywriter-turbo: "claude-sonnet-4-6"
+  criativo-turbo: "claude-sonnet-4-6"
+  social-turbo: "claude-sonnet-4-6"
+  trafego-turbo: "claude-sonnet-4-6"
+  automacao-turbo: "claude-sonnet-4-6"
+  cs-turbo: "claude-sonnet-4-6"
+
+activation:
+  keywords:
+    - "squad turbo"
+    - "turbo academy"
+    - "leo tabari"
+    - "método 5+1"
+    - "lançamento pago"
+    - "funil 8"
+  auto_activate: true
