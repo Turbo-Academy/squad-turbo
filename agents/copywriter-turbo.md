@@ -153,7 +153,7 @@ operational_frameworks:
   framework_1:
     name: "Página de Ingresso — Low-Ticket para Tráfego Frio"
     category: "page_copy"
-    skill_reference: "~/.claude/emb/skills/criador-paginas-low-ticket/SKILL.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/criador-paginas-low-ticket/SKILL.md"
     philosophy: |
       A página não vende o evento — vende o custo de tomar a decisão mais importante
       sem o que o evento entrega. Tráfego frio = lead não te conhece.
@@ -171,7 +171,7 @@ operational_frameworks:
   framework_2:
     name: "Estrutura do Evento 5+1"
     category: "event_structure"
-    skill_reference: "~/.claude/emb/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md"
     philosophy: |
       O 5+1 é uma sequência psicológica, não uma sequência de conteúdo.
       Cada aula move 1 crença na escada de 6 crenças.
@@ -211,7 +211,7 @@ operational_frameworks:
   framework_4:
     name: "Pitch de 14 Partes"
     category: "pitch"
-    skill_reference: "~/.claude/emb/skills/lancamento-pago-semanal/references/fase6-pitch-14partes.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase6-pitch-14partes.md"
     philosophy: |
       O pitch é a formalização de uma conclusão que o lead quase tirou sozinho.
       14 partes sequenciais: abertura → problema → tentativas → mecanismo →
@@ -220,7 +220,7 @@ operational_frameworks:
   framework_5:
     name: "Criativos de Ads — Copywriter Comanda"
     category: "ad_creatives"
-    skill_reference: "~/.claude/emb/skills/criador-criativos/SKILL.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/criador-criativos/SKILL.md"
     philosophy: |
       O @copywriter-turbo LIDERA a criação de criativos de ads.
       Ele define: Big Idea, ângulo, hooks (5-10 variações), body completo e CTA.
@@ -293,44 +293,44 @@ command_loader:
   "*pagina-ingresso":
     description: "Página de vendas low-ticket"
     requires:
-      - "~/.claude/emb/skills/criador-paginas-low-ticket/SKILL.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-paginas-low-ticket/SKILL.md"
     optional:
-      - "~/.claude/emb/skills/criador-paginas-low-ticket/references/diagnostico-pre-pagina.md"
-      - "~/.claude/emb/skills/criador-paginas-low-ticket/references/dobra1-promessa.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-paginas-low-ticket/references/diagnostico-pre-pagina.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-paginas-low-ticket/references/dobra1-promessa.md"
     output_format: "Copy completa da página em .docx"
 
   "*estrutura-evento":
     description: "Estrutura do evento 5+1 ou Workshop"
     requires:
-      - "~/.claude/emb/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md"
+      - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md"
     optional:
-      - "~/.claude/emb/skills/lancamento-pago-semanal/references/mecanicas-avancadas-evento.md"
+      - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/mecanicas-avancadas-evento.md"
     output_format: "Estrutura completa com escada de crenças"
 
   "*script-aula":
     description: "Roteiro de aula"
     requires:
-      - "~/.claude/emb/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md"
+      - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md"
     optional: []
     output_format: "Script completo com pontos de fala + slides"
 
   "*script-pitch":
     description: "Script do pitch"
     requires:
-      - "~/.claude/emb/skills/lancamento-pago-semanal/references/fase6-pitch-14partes.md"
+      - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase6-pitch-14partes.md"
     optional:
-      - "~/.claude/emb/skills/lancamento-pago-semanal/references/mecanicas-avancadas-evento.md"
+      - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/mecanicas-avancadas-evento.md"
     output_format: "Script do pitch com 14 partes"
 
   "*criativos-ads":
     description: "Criar criativos de ads — copywriter lidera copy, direciona @criativo-turbo"
     requires:
-      - "~/.claude/emb/skills/criador-criativos/SKILL.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-criativos/SKILL.md"
     optional:
-      - "~/.claude/emb/skills/criador-criativos/references/diagnostico-pre-criativo.md"
-      - "~/.claude/emb/skills/criador-criativos/references/anatomia-hook.md"
-      - "~/.claude/emb/skills/criador-criativos/references/anatomia-body.md"
-      - "~/.claude/emb/skills/criador-criativos/references/criativo-vsl-vs-lowtick.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-criativos/references/diagnostico-pre-criativo.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-criativos/references/anatomia-hook.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-criativos/references/anatomia-body.md"
+      - "~/.claude/squads/squad-turbo/skills/criador-criativos/references/criativo-vsl-vs-lowtick.md"
     output_format: "Copy dos criativos + briefing visual para @criativo-turbo"
 
   "*email-sequence":
@@ -349,9 +349,9 @@ CRITICAL_LOADER_RULE: |
 
 dependencies:
   skills:
-    - "~/.claude/emb/skills/lancamento-pago-semanal/SKILL.md"
-    - "~/.claude/emb/skills/criador-paginas-low-ticket/SKILL.md"
-    - "~/.claude/emb/skills/criador-criativos/SKILL.md"
+    - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/SKILL.md"
+    - "~/.claude/squads/squad-turbo/skills/criador-paginas-low-ticket/SKILL.md"
+    - "~/.claude/squads/squad-turbo/skills/criador-criativos/SKILL.md"
   tasks:
     - "pagina-ingresso.md"
     - "estrutura-evento.md"

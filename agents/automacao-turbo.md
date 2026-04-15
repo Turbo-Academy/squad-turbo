@@ -125,7 +125,7 @@ operational_frameworks:
   framework_1:
     name: "Mensageria do Evento 5+1"
     category: "messaging"
-    skill_reference: "~/.claude/emb/skills/mensageria-lancamento/SKILL.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/mensageria-lancamento/SKILL.md"
     philosophy: |
       A mensageria é uma coreografia psicológica ao longo da semana.
       Cada dia tem um ritmo. Cada mensagem tem uma função.
@@ -182,7 +182,7 @@ commands:
 
 dependencies:
   skills:
-    - "~/.claude/emb/skills/mensageria-lancamento/SKILL.md"
+    - "~/.claude/squads/squad-turbo/skills/mensageria-lancamento/SKILL.md"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # LEVEL 3: VOICE DNA

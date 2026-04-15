@@ -125,7 +125,7 @@ operational_frameworks:
   framework_1:
     name: "Estrutura de Campanhas para Lançamento Pago"
     category: "campaign_structure"
-    skill_reference: "~/.claude/emb/skills/lancamento-pago-semanal/references/fase4-trafego.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase4-trafego.md"
     philosophy: |
       Campanhas Advantage+ com estrutura simplificada.
       Foco em ROAS 1 no ingresso. Escala horizontal via criativos.
@@ -192,9 +192,9 @@ commands:
 
 dependencies:
   skills:
-    - "~/.claude/emb/skills/lancamento-pago-semanal/references/fase4-trafego.md"
-    - "~/.claude/emb/skills/lancamento-pago-semanal/references/otimizacoes-metricas.md"
-    - "~/.claude/emb/skills/criador-criativos/references/trafego-campanhas.md"
+    - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase4-trafego.md"
+    - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/otimizacoes-metricas.md"
+    - "~/.claude/squads/squad-turbo/skills/criador-criativos/references/trafego-campanhas.md"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # LEVEL 3: VOICE DNA

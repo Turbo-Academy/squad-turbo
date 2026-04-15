@@ -117,7 +117,7 @@ operational_frameworks:
   framework_1:
     name: "Criação de Reels"
     category: "organic_content"
-    skill_reference: "~/.claude/emb/skills/criador-reels/SKILL.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/criador-reels/SKILL.md"
     process:
       step_1: "Diagnóstico do expert + calibração de voz"
       step_2: "Gerar temas com filtros de demanda"
@@ -131,7 +131,7 @@ operational_frameworks:
   framework_2:
     name: "Stories Strategy"
     category: "organic_content"
-    skill_reference: "~/.claude/emb/skills/stories-expert/SKILL.md"
+    skill_reference: "~/.claude/squads/squad-turbo/skills/stories-expert/SKILL.md"
     philosophy: |
       Stories são o espaço mais íntimo do expert.
       Arcos narrativos que criam conexão e geram engajamento.
@@ -169,8 +169,8 @@ commands:
 
 dependencies:
   skills:
-    - "~/.claude/emb/skills/criador-reels/SKILL.md"
-    - "~/.claude/emb/skills/stories-expert/SKILL.md"
+    - "~/.claude/squads/squad-turbo/skills/criador-reels/SKILL.md"
+    - "~/.claude/squads/squad-turbo/skills/stories-expert/SKILL.md"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # LEVEL 3: VOICE DNA

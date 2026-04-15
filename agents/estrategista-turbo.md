@@ -428,7 +428,7 @@ dependencies:
   checklists:
     - "quality-gate-lancamento.md"
   skills:
-    - "~/.claude/emb/skills/lancamento-pago-semanal/SKILL.md"
+    - "~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/SKILL.md"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # LEVEL 3: VOICE DNA

@@ -1,5 +1,5 @@
 name: Squad Turbo
-version: "1.0.0"
+version: "2.0.0"
 description: >
   Squad de marketing digital da Turbo Academy, especializado em
   lançamento pago semanal (Método 5+1), Funil 8 (low-ticket) e
@@ -10,32 +10,84 @@ expert: Leo Tabari
 empresa: Turbo Academy
 
 stats:
-  agents: 7
-  skills: 9
+  agents: 10
+  skills: 20
   workflows: 3
+
+self_contained: true
+install_target: ~/.claude/squads/squad-turbo/
+distribution:
+  method: "clone ou ZIP — basta colocar a pasta em ~/.claude/squads/"
+  requires_emb: false
 
 agents:
   - id: estrategista-turbo
     tier: 0
-    role: "Orquestrador + Triage"
+    role: "Orquestrador + Triage. Checa 00-fundacao/ antes de delegar."
+    location: ~/.claude/squads/squad-turbo/agents/estrategista-turbo.md
+
+  - id: pesquisador-turbo
+    tier: 0
+    role: "Fundação INTERNA — extrai material do Leo e consolida 6 dossiês em 00-fundacao/. Autoridade exclusiva sobre 00-fundacao/ e 01-extratos/. NÃO escreve copy, NÃO cria visual."
+    location: ~/.claude/agents/pesquisador-turbo.md
+    authority: 00-fundacao/
+
+  - id: pesquisador-mercado-turbo
+    tier: 0
+    role: "Inteligência competitiva EXTERNA — pesquisa web de nicho, concorrência, benchmarks, avatar externo, objeções, gaps, tendências. Autoridade exclusiva sobre 02-mercado/. Usa WebSearch + defuddle + Meta Ad Library + YouTube. NÃO escreve em 00-fundacao/."
+    location: ~/.claude/agents/pesquisador-mercado-turbo.md
+    authority: 02-mercado/
+
   - id: copywriter-turbo
     tier: 1
-    role: "Copy + Páginas + Scripts + Modelos (Workshop/5+1)"
-  - id: criativo-turbo
+    role: "Copy + Páginas + Scripts + Modelos (Workshop/5+1). Lê 00-fundacao/."
+    location: ~/.claude/squads/squad-turbo/agents/copywriter-turbo.md
+
+  - id: diretor-criativo-turbo
     tier: 1
-    role: "Direção criativa + Slides + Brandbook + Criativos"
+    role: "Coordenador visual — define direção (paleta, tipografia, composição, moodboard), lê 00-fundacao/, recebe copy, delega execução para @designer-turbo + skills. NÃO executa arquivos."
+    location: ~/.claude/agents/diretor-criativo-turbo.md
+    coordinates: [designer-turbo]
+
+  - id: designer-turbo
+    tier: 2
+    role: "Executor visual — produz criativos, slides, brandbook assets, artes, banners sob brief do @diretor-criativo-turbo. (antigo criativo-turbo renomeado)"
+    location: ~/.claude/squads/squad-turbo/agents/designer-turbo.md
+    shim: ~/.claude/agents/designer-turbo.md
+
   - id: social-turbo
     tier: 1
     role: "Social media + Conteúdo orgânico + Reels"
+    location: ~/.claude/squads/squad-turbo/agents/social-turbo.md
+
   - id: trafego-turbo
     tier: 2
     role: "Tráfego pago Meta/Google"
+    location: ~/.claude/squads/squad-turbo/agents/trafego-turbo.md
+
   - id: automacao-turbo
     tier: 2
     role: "Automações n8n + ManyChat + Mensageria"
+    location: ~/.claude/squads/squad-turbo/agents/automacao-turbo.md
+
   - id: cs-turbo
     tier: 3
     role: "Customer Success + Pós-venda"
+    location: ~/.claude/squads/squad-turbo/agents/cs-turbo.md
+
+hierarquia_visual:
+  description: "Cadeia de comando para qualquer peça visual"
+  flow: |
+    @estrategista-turbo (triage)
+      → @pesquisador-turbo (00-fundacao/ se ausente)
+      → @copywriter-turbo (copy aprovada)
+      → @diretor-criativo-turbo (direção + brief)
+      → @designer-turbo (execução)
+
+regra_fundacao:
+  rule: "Sem 00-fundacao/ LOCKED, NENHUMA peça final sai do squad."
+  enforcement: "@estrategista-turbo checa na entrada; @copywriter-turbo e @diretor-criativo-turbo checam no ritual de abertura."
+  autoridade_exclusiva: "@pesquisador-turbo é o único que escreve em 00-fundacao/ e 01-extratos/."
 
 metodologias:
   - name: "Método 5+1"
@@ -46,21 +98,40 @@ metodologias:
     description: "Método low-ticket proprietário da Turbo Academy."
 
 skills:
-  shared:
+  # TODAS locais em ~/.claude/squads/squad-turbo/skills/ — squad self-contained
+  marketing:
     - lancamento-pago-semanal
     - criador-paginas-low-ticket
     - criador-criativos
     - criador-reels
     - mensageria-lancamento
-    - stories-expert
+  visual_core:
     - designer-senior
+    - design-tokens-turbo
+    - lovable-style-turbo
+    - gerador-instagram
+    - page-optimizer
   squad_specific:
     - gerador-slides-turbo
     - estruturador-evento-turbo
+  shared_references:
+    path: ~/.claude/squads/squad-turbo/skills/_shared/
+    files:
+      - anti-ia-blacklist.md
+      - quality-gates.md
+      - turbo-funnel-workflows.md
+      - brunson-value-ladder.md
+      - copy-frameworks.md
+      - funis-overview.md
+      - hook-formulas.md
+      - hormozi-offer.md
+      - kennedy-direct-response.md
+      - walker-plf.md
   ui_ux_pro_max_suite:
-    note: "Pacote UI UX Pro Max v2.0 — escopo: @criativo-turbo"
+    note: "Pacote UI UX Pro Max v2.0 — escopo: @diretor-criativo-turbo (direção) + @designer-turbo (execução)"
     scope: squad-local
-    owner_agent: criativo-turbo
+    owner_agent: diretor-criativo-turbo
+    executor_agent: designer-turbo
     path: ~/.claude/squads/squad-turbo/skills/
     skills:
       - ui-ux-pro-max
@@ -75,3 +146,30 @@ settings:
   language: "pt-BR"
   independent: true
   parent_squad: null
+
+changelog:
+  - version: "2.0.0"
+    date: "2026-04-14"
+    changes:
+      - "SELF-CONTAINED: todas as skills marketing + visual core + shared refs copiadas para dentro do squad"
+      - "Renomeado design-tokens-turbo → design-tokens-turbo e lovable-style-turbo → lovable-style-turbo"
+      - "Copiadas 7 skills marketing (lancamento-pago-semanal, criador-paginas-low-ticket, criador-criativos, criador-reels, mensageria-lancamento, gerador-instagram, page-optimizer)"
+      - "Copiado designer-senior como executor HTML canônico"
+      - "Copiadas refs compartilhadas (_shared/) exceto ddemarco-methodology, excluídas também criador-relatos e stories-expert conforme pedido"
+      - "Copiado core/ (constitution.md, templates/, checklists/, frameworks/)"
+      - "Agentes novos também copiados para ~/.claude/squads/squad-turbo/agents/"
+      - "Todos os paths internos reescritos: ~/.claude/squads/squad-turbo/ → ~/.claude/squads/squad-turbo/"
+      - "Pronto para distribuição via clone/ZIP — não depende de EMB instalado"
+  - version: "1.2.0"
+    date: "2026-04-14"
+    changes:
+      - "Adicionado @pesquisador-mercado-turbo (inteligência competitiva externa — autoridade sobre 02-mercado/)"
+      - "Separação clara: @pesquisador-turbo olha para dentro (material do Leo), @pesquisador-mercado-turbo olha para fora (web/concorrência)"
+  - version: "1.1.0"
+    date: "2026-04-14"
+    changes:
+      - "Adicionado @pesquisador-turbo (fundação — dono exclusivo de 00-fundacao/)"
+      - "Adicionado @diretor-criativo-turbo (coordenador visual)"
+      - "Renomeado criativo-turbo → designer-turbo (executor sob brief do diretor)"
+      - "Nova hierarquia visual: diretor coordena, designer executa"
+      - "Regra fundação-primeiro formalizada no yaml"
