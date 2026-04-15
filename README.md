@@ -50,10 +50,10 @@ O `@estrategista-turbo` vai:
 2. Rotear para `@pesquisador-turbo`
 3. Pedir o material bruto do projeto (aulas, VSLs, páginas atuais, posts, VoC, etc.)
 4. Consolidar em 6 dossiês (`00-fundacao/briefing.md`, `avatar.md`, `oferta.md`, `voz.md`, `referencias-expert.md`, `inventario.md`)
-5. Fazer LOCK da fundação
+5. Fazer a fundação
 6. Liberar copy, visual, tráfego, automação, pós-venda
 
-> ⚠️ **Regra de ouro:** sem `00-fundacao/` LOCKED, nenhuma peça final sai. Tem um motivo — sem fundação, o squad produz copy genérica com cara de IA. Não pule esse passo.
+> ⚠️ **Regra de ouro:** sem `00-fundacao/` nenhuma peça final sai. Tem um motivo — sem fundação, o squad produz copy genérica com cara de IA. Não pule esse passo.
 
 ---
 
@@ -61,8 +61,7 @@ O `@estrategista-turbo` vai:
 
 | Fixo no squad (método do Leo) | Você preenche no SEU projeto |
 |-------------------------------|-------------------------------|
-| Método 5+1, Lançamento Pago Semanal, Funil 8 | Produto, promessa, preço, mecanismo |
-| Frameworks (Brunson, Hormozi, Todd Brown, Schwartz) | Seu avatar real (dores, linguagem, VoC) |
+| Método 5+1, Lançamento Pago Semanal, Funil 8 | Produto, promessa, preço, mecanismo | Seu avatar real (dores, linguagem, VoC) |
 | Protocolo Anti-IA, regras de qualidade | Tom de voz do SEU expert |
 | Templates de briefing, páginas, slides | Conteúdo, depoimentos reais, métricas reais |
 
@@ -136,7 +135,7 @@ squad-turbo/
     ├── constitution.md        ← 7 artigos inegociáveis
     ├── templates/             ← briefings, avatar, oferta, funil
     ├── checklists/            ← qualidade, aprovação, lançamento
-    └── frameworks/            ← Brunson, Todd Brown
+    └── frameworks/           
 ```
 
 ---
