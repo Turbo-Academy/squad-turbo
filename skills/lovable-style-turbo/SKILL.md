@@ -1,13 +1,13 @@
 ---
 name: lovable-style-emb
-description: Replica o loop de produção do Lovable dentro do Claude Code — stack fixo (Vite + React + TypeScript + Tailwind + shadcn/ui), tokens EMB pré-configurados, biblioteca de componentes prontos (Hero, FeatureGrid, Pricing, CTA, Footer, Nav) e prompt system calibrado para gerar páginas com qualidade visual consistente sem improviso de stack. Use quando o usuário pedir "landing nível Lovable", "página em React", "scaffolding de novo projeto web" ou qualquer interface que se beneficie do combo Vite+shadcn+Tailwind. Importa automaticamente `design-tokens-emb` e consulta `frontend-design`, `ui-styling` e `designer-senior` para fundamentos.
+description: Replica o loop de produção do Lovable dentro do Claude Code — stack fixo (Vite + React + TypeScript + Tailwind + shadcn/ui), tokens Turbo pré-configurados, biblioteca de componentes prontos (Hero, FeatureGrid, Pricing, CTA, Footer, Nav) e prompt system calibrado para gerar páginas com qualidade visual consistente sem improviso de stack. Use quando o usuário pedir "landing nível Lovable", "página em React", "scaffolding de novo projeto web" ou qualquer interface que se beneficie do combo Vite+shadcn+Tailwind. Importa automaticamente `design-tokens-turbo` e consulta `frontend-design`, `ui-styling` e `designer-senior` para fundamentos.
 license: MIT
 metadata:
-  author: Squad EMB
+  author: Squad Turbo
   version: "1.0.0"
 ---
 
-# Lovable Style EMB
+# Lovable Style Turbo
 
 Stack opinado + scaffolding automático + prompt system. O equivalente Lovable dentro do Claude Code.
 
@@ -16,7 +16,7 @@ Stack opinado + scaffolding automático + prompt system. O equivalente Lovable d
 Lovable entrega qualidade consistente porque **não pergunta**, não improvisa stack. Esta skill faz o mesmo:
 
 - **Vite + React + TypeScript** — build rápido, DX superior, tipos
-- **Tailwind v3+** com preset `design-tokens-emb` — coerência automática
+- **Tailwind v3+** com preset `design-tokens-turbo` — coerência automática
 - **shadcn/ui** — componentes acessíveis, copy-paste, sem dependência runtime
 - **Lucide icons** — biblioteca padrão
 - **Motion One** (opcional) ou **framer-motion** — animações
@@ -68,7 +68,7 @@ npx shadcn@latest init
 
 Arquivos críticos a criar (ver `template/` desta skill):
 - `package.json`, `vite.config.ts`, `tsconfig.json`, `tsconfig.node.json`
-- `tailwind.config.ts` (importa preset EMB)
+- `tailwind.config.ts` (importa preset Turbo)
 - `src/index.css` (importa tokens + paleta)
 - `src/main.tsx`, `src/App.tsx`
 - `src/components/ui/` (shadcn — adicionar conforme uso)
@@ -113,7 +113,7 @@ Se o usuário pedir deploy:
 | Build | Vite | HMR instantâneo, ESM nativo |
 | UI | React 18+ | Ecossistema, shadcn |
 | Tipos | TypeScript strict | Pega bug em build |
-| CSS | Tailwind + tokens EMB | Coerência automática |
+| CSS | Tailwind + tokens Turbo | Coerência automática |
 | Componentes | shadcn/ui | Acessível, copy-paste, sem runtime |
 | Ícones | Lucide | 1.5k+ ícones, coerentes |
 | Forms | react-hook-form + zod | Padrão de mercado |
@@ -135,7 +135,7 @@ Ver `recipes/` desta skill:
 
 ## Cross-references
 
-- Tokens (obrigatório) → `design-tokens-emb`
+- Tokens (obrigatório) → `design-tokens-turbo`
 - Componentes shadcn → `ui-styling`
 - Estética anti-IA → `frontend-design` + `_shared/anti-ia-blacklist.md`
 - Decisões de design (tipografia/cor/grid) → `design-system`

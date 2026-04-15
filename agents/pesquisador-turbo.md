@@ -121,7 +121,7 @@ Se skill não existir: rodar fallback manual e reportar gap em `inventario.md`.
 
 ### Passo 3 — Consolidação
 
-Gerar os 6 dossiês em `00-fundacao/` (estrutura igual ao EMB, com foco Leo/Turbo):
+Gerar os 6 dossiês em `00-fundacao/` (estrutura padrão do Squad Turbo):
 
 #### 3.1 — `voz.md`
 ```markdown

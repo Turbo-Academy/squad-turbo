@@ -1,7 +1,7 @@
 # Perfect Webinar — Framework Russell Brunson
 
 > Baseado em "Expert Secrets" de Russell Brunson
-> Adaptado para Squad EMB — @copywriter-emb produz script, @diretor-criativo-emb produz slides
+> Adaptado para Squad Turbo — @copywriter-turbo produz script, @diretor-criativo-turbo produz slides
 
 ## Conceito
 
@@ -54,12 +54,12 @@ Cada história segue a estrutura: Backstory → Wall → Epiphany → Plan → R
 | Stay rate (até oferta) | <30% | 40-50% | 60%+ |
 | Conversão (dos presentes) | <3% | 5-10% | 15%+ |
 
-## Aplicação no EMB
+## Aplicação no Squad Turbo
 
 | Peça | Executor |
 |------|----------|
-| Script do webinar (90 min) | @copywriter-emb → `/copywriter-senior` |
-| Slides | @diretor-criativo-emb → `/designer-senior` |
-| Página de registro | @copywriter-emb → `/criador-paginas-low-ticket` → @diretor-criativo-emb |
-| Criativos de ads | @copywriter-emb → `/criador-criativos` |
-| Emails (lembretes + replay + carrinho) | @copywriter-emb → `/copywriter-senior` |
+| Script do webinar (90 min) | @copywriter-turbo → `/copywriter-senior` |
+| Slides | @diretor-criativo-turbo → `/designer-senior` |
+| Página de registro | @copywriter-turbo → `/criador-paginas-low-ticket` → @diretor-criativo-turbo |
+| Criativos de ads | @copywriter-turbo → `/criador-criativos` |
+| Emails (lembretes + replay + carrinho) | @copywriter-turbo → `/copywriter-senior` |

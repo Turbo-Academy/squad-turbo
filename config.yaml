@@ -1,16 +1,25 @@
 squad: squad-turbo
-version: "1.0.0"
+version: "2.1.0"
 
-expert:
-  name: "Leo Tabari"
+# Autor do método — não confundir com o "expert" de cada projeto do aluno.
+# Cada aluno preenche o expert dele (ou do cliente dele) em 00-fundacao/briefing.md.
+metodo:
+  autor: "Leo Tabari"
   empresa: "Turbo Academy"
   nicho: "Lançamentos pagos para infoprodutores"
   autoridade: "+200 lançamentos, +R$100M em faturamento"
+  metodologias:
+    - "Lançamento Pago Semanal (ROAS 1 na captação)"
+    - "Método 5+1 (5 aulas + pitch)"
+    - "Funil 8 (low-ticket perpétuo)"
 
 customization:
   estrategista: "Estrategista Turbo"
+  pesquisador: "Pesquisador Turbo"
+  pesquisador_mercado: "Pesquisador de Mercado Turbo"
   copywriter: "Copywriter Turbo"
-  criativo: "Criativo Turbo"
+  diretor_criativo: "Diretor Criativo Turbo"
+  designer: "Designer Turbo"
   social: "Social Turbo"
   trafego: "Tráfego Turbo"
   automacao: "Automação Turbo"
@@ -19,17 +28,19 @@ customization:
 paths:
   agents: "agents/"
   skills: "skills/"
-  tasks: "tasks/"
-  workflows: "workflows/"
-  templates: "templates/"
-  checklists: "checklists/"
-  data: "data/"
-  shared_skills: "~/.claude/emb/skills/"
+  core: "core/"
+  templates: "core/templates/"
+  checklists: "core/checklists/"
+  frameworks: "core/frameworks/"
+  shared_skills: "~/.claude/squads/squad-turbo/skills/_shared/"
 
 model_assignment:
   estrategista-turbo: "claude-opus-4-6"
+  pesquisador-turbo: "claude-sonnet-4-6"
+  pesquisador-mercado-turbo: "claude-sonnet-4-6"
   copywriter-turbo: "claude-sonnet-4-6"
-  criativo-turbo: "claude-sonnet-4-6"
+  diretor-criativo-turbo: "claude-sonnet-4-6"
+  designer-turbo: "claude-sonnet-4-6"
   social-turbo: "claude-sonnet-4-6"
   trafego-turbo: "claude-sonnet-4-6"
   automacao-turbo: "claude-sonnet-4-6"
@@ -39,8 +50,14 @@ activation:
   keywords:
     - "squad turbo"
     - "turbo academy"
-    - "leo tabari"
     - "método 5+1"
     - "lançamento pago"
     - "funil 8"
+    - "ROAS 1"
+    - "workshop 5+1"
   auto_activate: true
+
+distribution:
+  self_contained: true
+  requires: []
+  install: "clonar/descompactar em ~/.claude/squads/squad-turbo/"

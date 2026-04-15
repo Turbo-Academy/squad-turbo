@@ -1,9 +1,10 @@
 name: Squad Turbo
-version: "2.0.0"
+version: "2.1.0"
 description: >
-  Squad de marketing digital da Turbo Academy, especializado em
-  lançamento pago semanal (Método 5+1), Funil 8 (low-ticket) e
-  funis digitais. Expert: Leo Tabari.
+  Squad de marketing digital que leva a metodologia da Turbo Academy
+  (Lançamento Pago Semanal, Método 5+1, Funil 8) pra rodar em qualquer
+  projeto de cliente. O método é da Turbo; o projeto onde o squad
+  opera é o do aluno (produto próprio ou cliente).
 
 entry_agent: estrategista-turbo
 expert: Leo Tabari
@@ -29,13 +30,13 @@ agents:
   - id: pesquisador-turbo
     tier: 0
     role: "Fundação INTERNA — extrai material do Leo e consolida 6 dossiês em 00-fundacao/. Autoridade exclusiva sobre 00-fundacao/ e 01-extratos/. NÃO escreve copy, NÃO cria visual."
-    location: ~/.claude/agents/pesquisador-turbo.md
+    location: ~/.claude/squads/squad-turbo/agents/pesquisador-turbo.md
     authority: 00-fundacao/
 
   - id: pesquisador-mercado-turbo
     tier: 0
     role: "Inteligência competitiva EXTERNA — pesquisa web de nicho, concorrência, benchmarks, avatar externo, objeções, gaps, tendências. Autoridade exclusiva sobre 02-mercado/. Usa WebSearch + defuddle + Meta Ad Library + YouTube. NÃO escreve em 00-fundacao/."
-    location: ~/.claude/agents/pesquisador-mercado-turbo.md
+    location: ~/.claude/squads/squad-turbo/agents/pesquisador-mercado-turbo.md
     authority: 02-mercado/
 
   - id: copywriter-turbo
@@ -46,14 +47,13 @@ agents:
   - id: diretor-criativo-turbo
     tier: 1
     role: "Coordenador visual — define direção (paleta, tipografia, composição, moodboard), lê 00-fundacao/, recebe copy, delega execução para @designer-turbo + skills. NÃO executa arquivos."
-    location: ~/.claude/agents/diretor-criativo-turbo.md
+    location: ~/.claude/squads/squad-turbo/agents/diretor-criativo-turbo.md
     coordinates: [designer-turbo]
 
   - id: designer-turbo
     tier: 2
     role: "Executor visual — produz criativos, slides, brandbook assets, artes, banners sob brief do @diretor-criativo-turbo. (antigo criativo-turbo renomeado)"
     location: ~/.claude/squads/squad-turbo/agents/designer-turbo.md
-    shim: ~/.claude/agents/designer-turbo.md
 
   - id: social-turbo
     tier: 1
@@ -148,6 +148,19 @@ settings:
   parent_squad: null
 
 changelog:
+  - version: "2.1.0"
+    date: "2026-04-15"
+    changes:
+      - "Distribuição para alunos: squad agora é 100% self-contained, sem dependência de EMB ou de arquivos fora da pasta"
+      - "Todos os paths ~/.claude/agents/ e ~/.claude/emb/ reescritos para ~/.claude/squads/squad-turbo/"
+      - "Rebranding EMB→Turbo em toda a constituição, templates, checklists, frameworks e skills"
+      - "Framing refinado: a metodologia da Turbo roda no projeto do cliente (aluno aplica no próprio produto ou nos clientes dele)"
+      - "Config.yaml: expert→metodo (autor do método, não expert do projeto); adicionados 4 agentes que faltavam no model_assignment"
+      - "README.md raiz criado com onboarding do aluno"
+      - "core/constitution.md v2.0 do Squad Turbo (7 artigos, gates QG-001…QG-005)"
+      - ".claude/CLAUDE.md alinhado com 10 agentes da v2.x"
+      - "squad-turbo-guia.html incluído na raiz como guia oficial do aluno"
+      - "Regra NÃO MODIFICAR documentada: pasta é mantida pelo time da Turbo"
   - version: "2.0.0"
     date: "2026-04-14"
     changes:

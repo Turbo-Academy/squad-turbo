@@ -1,17 +1,17 @@
-# lovable-style-emb
+# lovable-style-turbo
 
-Stack opinado + scaffolding + recipes. O equivalente Lovable dentro do Claude Code.
+Stack opinado + scaffolding + recipes. Equivalente Lovable dentro do Claude Code, calibrado para o Squad Turbo.
 
 ## Setup de projeto novo
 
 ```bash
 # 1. Criar pasta + copiar template
 mkdir meu-app && cd meu-app
-cp -r ~/.claude/emb/skills/lovable-style-emb/template/. .
+cp -r ~/.claude/squads/squad-turbo/skills/lovable-style-turbo/template/. .
 
-# 2. Copiar tokens EMB para dentro do projeto
+# 2. Copiar tokens Turbo para dentro do projeto
 mkdir tokens
-cp -r ~/.claude/emb/skills/design-tokens-emb/* tokens/
+cp -r ~/.claude/squads/squad-turbo/skills/design-tokens-turbo/* tokens/
 
 # 3. Instalar deps + rodar
 npm install
@@ -34,7 +34,7 @@ Edite `src/index.css`, troque o import:
 ```
 template/
 ├── package.json, vite.config.ts, tsconfig.*, postcss.config.js
-├── tailwind.config.ts        # importa preset EMB
+├── tailwind.config.ts        # importa preset Turbo
 ├── index.html
 └── src/
     ├── main.tsx, App.tsx
@@ -61,7 +61,6 @@ recipes/
 
 ## Cross-references
 
-- `design-tokens-emb` — tokens (obrigatório)
+- `design-tokens-turbo` — tokens (obrigatório)
 - `ui-styling` — guia shadcn detalhado
-- `frontend-design` — fundamentos anti-IA
 - `designer-senior` — alternativa HTML puro

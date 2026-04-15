@@ -1,22 +1,22 @@
-# EMB Funnel Workflows — 20 Funis Completos
-# Adaptados para o Squad EMB (3 agentes + skills)
-# Referência: @estrategista-emb usa para executar qualquer tipo de funil
+# Turbo Funnel Workflows — 20 Funis Completos
+# Adaptados para o Squad Turbo (3 agentes + skills)
+# Referência: @estrategista-turbo usa para executar qualquer tipo de funil
 
 ---
 
 ## Legenda de Execução
 
 ```
-@E   = @estrategista-emb    (diagnóstico, arquitetura, revisão)
-@C   = @copywriter-emb      (toda copy, roteia para skills)
-@DC  = @diretor-criativo-emb (visual, HTML, brandbook)
+@E   = @estrategista-turbo    (diagnóstico, arquitetura, revisão)
+@C   = @copywriter-turbo      (toda copy, roteia para skills)
+@DC  = @diretor-criativo-turbo (visual, HTML, brandbook)
 DONO = Expert/usuário executa manualmente (plataforma, gravação, call, tráfego)
-[F]  = Agente futuro (ver ROADMAP-EMB.md)
+[F]  = Agente futuro (ver ROADMAP-TURBO.md)
 ```
 
-### Mapeamento MSE → EMB
+### Mapeamento de papéis
 
-| Agente MSE | Quem faz no EMB | Como |
+| Agente MSE | Quem faz no Squad Turbo | Como |
 |------------|-----------------|------|
 | @estrategista | @E | Direto |
 | @copywriter | @C | Via skills especializadas |
@@ -25,8 +25,8 @@ DONO = Expert/usuário executa manualmente (plataforma, gravação, call, tráfe
 | @pesquisador | @E → `/pesquisa-voc` | Skill substitui agente |
 | @gestor-trafego | @C (copy dos ads) + DONO (executa no gerenciador) | [F] @gestor-trafego-emb |
 | @automacao | DONO (configura n8n/Make/ManyChat) | [F] @automacao-emb |
-| @closer | @C (script da call) + DONO (executa a call) | [F] @closer-emb |
-| @sdr | @C (cadência escrita) + DONO (qualifica) | [F] @closer-emb |
+| @closer | @C (script da call) + DONO (executa a call) | [F] @closer-turbo |
+| @sdr | @C (cadência escrita) + DONO (qualifica) | [F] @closer-turbo |
 | @analista-dados | DONO (verifica métricas) | [F] @analista-emb |
 | @editor-video | DONO (edita vídeo externamente) | [F] @editor-emb |
 | @social-media | @C → `/criador-reels`, `/stories-expert` | [F] @social-emb |
@@ -508,7 +508,7 @@ Ticket: R$1K-50K+ | Timeline: 6-8 semanas | Framework: Evento + Oferta de Palco
 
 | # | Tarefa | Executor | Skill |
 |---|--------|----------|-------|
-| 1 | Follow-up de vendas | DONO | [F] @closer-emb |
+| 1 | Follow-up de vendas | DONO | [F] @closer-turbo |
 | 2 | Relatório do evento | DONO | [F] @analista-emb |
 
 ---
@@ -621,7 +621,7 @@ Ticket: R$3K-100K+ | Timeline: 1-2 semanas | Framework: Hormozi Offer
 | # | Tarefa | Executor | Skill |
 |---|--------|----------|-------|
 | 1 | Tráfego para aplicação | DONO | [F] @gestor-trafego-emb |
-| 2 | Qualificação BANT | DONO | [F] @closer-emb |
+| 2 | Qualificação BANT | DONO | [F] @closer-turbo |
 | 3 | Calls de vendas | DONO | — |
 
 ---
@@ -707,7 +707,7 @@ Ticket: R$3K-50K+ | Timeline: 1-2 semanas | Framework: Hormozi Offer
 
 | # | Tarefa | Executor | Skill |
 |---|--------|----------|-------|
-| 1 | Qualificação BANT | DONO | [F] @closer-emb |
+| 1 | Qualificação BANT | DONO | [F] @closer-turbo |
 | 2 | Calls de vendas | DONO | — |
 
 ---
@@ -740,7 +740,7 @@ Ticket: R$500-20K+ | Timeline: 1-3 semanas | Framework: Portfólio + Sessão
 
 ---
 
-## Resumo de Cobertura EMB
+## Resumo de Cobertura do Squad Turbo
 
 | Capacidade | Coberta | Por quem |
 |------------|---------|----------|

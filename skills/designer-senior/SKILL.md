@@ -350,7 +350,7 @@ Mesmos princípios, adaptados:
 
 ---
 
-## Cross-references EMB (adicionado v1.1)
+## Cross-references Squad Turbo (adicionado v1.1)
 
 Para HTML puro, sempre importe tokens da skill `design-tokens-emb` antes de estilizar:
 

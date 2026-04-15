@@ -158,4 +158,4 @@ CARD_BG = RGBColor(0x1a, 0x1a, 0x2e)
 
 - Recebe conteúdo de: @copywriter-turbo (estrutura de aula)
 - Executado por: @criativo-turbo
-- Referência de design: `~/.claude/emb/skills/designer-senior/SKILL.md`
+- Referência de design: `~/.claude/squads/squad-turbo/skills/designer-senior/SKILL.md`

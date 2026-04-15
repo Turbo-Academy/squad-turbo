@@ -130,4 +130,4 @@ Entregar:
 - Executado por: @copywriter-turbo (estrutura de aulas)
 - Complementa: `lancamento-pago-semanal` (fase 5)
 - Alimenta: @criativo-turbo (slides), @automacao-turbo (mensageria)
-- Referência: `~/.claude/emb/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md`
+- Referência: `~/.claude/squads/squad-turbo/skills/lancamento-pago-semanal/references/fase5-evento-5mais1.md`

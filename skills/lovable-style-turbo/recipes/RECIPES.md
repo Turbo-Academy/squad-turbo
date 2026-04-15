@@ -67,7 +67,7 @@ Todos assumem: `design-tokens-emb` importado, paleta `neon-dark` (ajuste classes
 <footer className="border-t border-border">
   <div className="mx-auto max-w-container-xl px-6 py-16 grid gap-12 md:grid-cols-4">
     <div>
-      <span className="text-gradient font-semibold">EMB</span>
+      <span className="text-gradient font-semibold">TURBO</span>
       <p className="mt-3 text-sm text-fg-muted">Tagline curta.</p>
     </div>
     {colunas.map(c => (

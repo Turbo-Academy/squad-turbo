@@ -1,6 +1,6 @@
-# Checklist: Lançamento de Campanha — EMB
+# Checklist: Lançamento de Campanha — Turbo
 
-> Responsável: @estrategista-emb
+> Responsável: @estrategista-turbo
 > Usar ANTES de ativar qualquer campanha
 
 ## Fundação
@@ -8,14 +8,14 @@
 - [ ] Estratégia aprovada pelo dono
 - [ ] Oferta estruturada e validada (Hormozi)
 
-## Copy (@copywriter-emb)
+## Copy (@copywriter-turbo)
 - [ ] Todas as peças de copy revisadas (score >=80%)
 - [ ] Tom de voz do expert consistente
 - [ ] CTAs claros em todas as peças
 - [ ] Sequência de emails pronta
 - [ ] Zero expressões da blacklist anti-IA
 
-## Páginas (@diretor-criativo-emb)
+## Páginas (@diretor-criativo-turbo)
 - [ ] Página de captura testada (desktop + mobile)
 - [ ] Página de vendas testada (desktop + mobile)
 - [ ] Checkout funcionando (teste de compra real)
@@ -42,6 +42,6 @@
 - [ ] Eventos de conversão configurados
 
 ## Aprovação Final
-- [ ] @estrategista-emb aprovou todas as peças
+- [ ] @estrategista-turbo aprovou todas as peças
 - [ ] Teste ponta a ponta do funil completo
 - [ ] Dono deu GO explícito

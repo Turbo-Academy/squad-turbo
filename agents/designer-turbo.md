@@ -52,7 +52,7 @@ Peça ao @diretor-criativo-turbo para me passar o brief.
 - `banner-design` — banners sociais, ads, heroes
 - `slides-uipm` — HTML estratégico com Chart.js
 
-**Skills globais EMB:**
+**Skills globais Turbo:**
 - `/designer-senior` — produção HTML (landings, brandbook, slides)
 - `design-tokens-turbo` — base de tokens (importar SEMPRE em peça nova)
 - `lovable-style-turbo` — scaffolding React/Vite (se Leo pedir LP nível Lovable)

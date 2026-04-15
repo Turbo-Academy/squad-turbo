@@ -1,17 +1,17 @@
-# Checklist: Lançamento de Webinar — EMB
+# Checklist: Lançamento de Webinar — Turbo
 
-> Responsável: @estrategista-emb
+> Responsável: @estrategista-turbo
 > Usar ANTES do webinar ao vivo
 > Ref: framework brunson-perfect-webinar.md
 
 ## Pré-Webinar (D-7)
-- [ ] Script do webinar finalizado (@copywriter-emb)?
-- [ ] Slides prontos (@diretor-criativo-emb)?
+- [ ] Script do webinar finalizado (@copywriter-turbo)?
+- [ ] Slides prontos (@diretor-criativo-turbo)?
 - [ ] Expert ensaiou com script + slides?
-- [ ] Página de registro no ar (@diretor-criativo-emb)?
+- [ ] Página de registro no ar (@diretor-criativo-turbo)?
 - [ ] Campanhas de registro ativas (DONO)?
 - [ ] Sequência de lembretes configurada — D-3, D-1, 1h antes, ao vivo (DONO)?
-- [ ] Página de vendas pronta (@copywriter-emb → @diretor-criativo-emb)?
+- [ ] Página de vendas pronta (@copywriter-turbo → @diretor-criativo-turbo)?
 - [ ] Checkout testado (DONO)?
 
 ## Dia do Webinar (D-0)
@@ -22,8 +22,8 @@
 
 ## Pós-Webinar (D+1 a D+7)
 - [ ] Replay disponível?
-- [ ] Email de replay enviado (@copywriter-emb)?
-- [ ] Sequência de carrinho ativa — urgência (@copywriter-emb)?
+- [ ] Email de replay enviado (@copywriter-turbo)?
+- [ ] Sequência de carrinho ativa — urgência (@copywriter-turbo)?
 - [ ] Retargeting de quem assistiu (DONO)?
 - [ ] Métricas coletadas (show-up, stay, conversão)?
 

@@ -1,6 +1,6 @@
 # design-tokens-emb
 
-Camada EMB de design tokens. Tokens base + 3 paletas + preset Tailwind.
+Camada Turbo de design tokens. Tokens base + 3 paletas + preset Tailwind.
 
 ## Estrutura
 

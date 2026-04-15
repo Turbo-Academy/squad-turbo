@@ -1,4 +1,4 @@
-# Fontes — Estratégia EMB
+# Fontes — Estratégia Squad Turbo
 
 Fonte é a causa #1 de CLS em página de venda. E custa pontos de LCP quando é texto. Este documento elimina as duas dores.
 

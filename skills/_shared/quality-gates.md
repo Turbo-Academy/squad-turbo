@@ -1,6 +1,6 @@
-# Quality Gates — Checklist de Entrega EMB
+# Quality Gates — Checklist de Entrega Squad Turbo
 
-Toda skill do EMB valida estes gates antes de entregar o output ao usuário.
+Toda skill do Squad Turbo valida estes gates antes de entregar o output ao usuário.
 Se qualquer gate falhar, corrigir ANTES de mostrar o resultado.
 
 ---

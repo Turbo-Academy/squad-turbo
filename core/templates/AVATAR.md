@@ -1,6 +1,6 @@
 # AVATAR — {NOME DO PROJETO}
 
-> Responsável: @estrategista-emb
+> Responsável: @estrategista-turbo
 
 ---
 

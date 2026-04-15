@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Squad Turbo v2.1 — Guia do Aluno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-2:#111114;
+    --bg-3:#17171c;
+    --line:#24242c;
+    --text:#ededf0;
+    --muted:#8a8a95;
+    --accent:#ff5b2e;
+    --accent-2:#ffb347;
+    --ok:#4ade80;
+    --info:#60a5fa;
+    --danger:#f87171;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  code,pre,.mono{font-family:'JetBrains Mono',monospace}
+  .serif{font-family:'Instrument Serif',serif;font-weight:400}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,11,.8);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .inner{
+    max-width:1200px;margin:0 auto;padding:16px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  nav .logo{font-weight:800;letter-spacing:-.02em;font-size:18px}
+  nav .logo span{color:var(--accent)}
+  nav ul{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+  nav a:hover{color:var(--text)}
+
+  /* HERO */
+  .hero{
+    padding:120px 24px 80px;
+    background:
+      radial-gradient(800px 400px at 80% -10%, rgba(255,91,46,.15), transparent 60%),
+      radial-gradient(600px 300px at 10% 50%, rgba(255,179,71,.08), transparent 60%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .wrap{max-width:1200px;margin:0 auto}
+  .badge{
+    display:inline-block;
+    padding:6px 12px;border:1px solid var(--line);border-radius:999px;
+    font-size:12px;color:var(--muted);margin-bottom:24px;
+    background:var(--bg-2);
+  }
+  .badge .dot{display:inline-block;width:6px;height:6px;background:var(--ok);border-radius:50%;margin-right:8px;vertical-align:middle}
+  h1{
+    font-family:'Instrument Serif',serif;
+    font-size:clamp(48px,7vw,88px);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    margin-bottom:24px;
+    font-weight:400;
+  }
+  h1 em{color:var(--accent);font-style:italic}
+  .lead{font-size:20px;color:var(--muted);max-width:720px;margin-bottom:40px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 24px;border-radius:10px;
+    font-weight:600;font-size:14px;
+    text-decoration:none;border:1px solid transparent;
+    transition:all .2s;
+  }
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#ff7048;transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--line);color:var(--text);background:var(--bg-2)}
+  .btn-ghost:hover{border-color:var(--muted)}
+
+  /* SECTIONS */
+  section{padding:80px 24px;border-bottom:1px solid var(--line)}
+  .wrap{max-width:1200px;margin:0 auto}
+  .eyebrow{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+  h2{font-family:'Instrument Serif',serif;font-size:clamp(36px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;font-weight:400;margin-bottom:20px}
+  h3{font-size:22px;font-weight:700;margin-bottom:12px;letter-spacing:-.01em}
+  h4{font-size:16px;font-weight:600;margin-bottom:8px}
+  p{color:var(--muted);margin-bottom:16px}
+  p.white{color:var(--text)}
+
+  /* CARD GRID */
+  .grid{display:grid;gap:20px;margin-top:40px}
+  .grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px;
+    transition:all .25s;
+  }
+  .card:hover{border-color:#3a3a44;transform:translateY(-2px)}
+  .card .tag{
+    display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;padding:4px 8px;border-radius:6px;
+    margin-bottom:12px;
+  }
+  .tier-0{background:rgba(255,91,46,.15);color:var(--accent)}
+  .tier-1{background:rgba(96,165,250,.15);color:var(--info)}
+  .tier-2{background:rgba(74,222,128,.12);color:var(--ok)}
+  .tier-3{background:rgba(255,179,71,.15);color:var(--accent-2)}
+  .card h3{margin-bottom:6px}
+  .card .role{color:var(--muted);font-size:14px;margin-bottom:12px}
+  .card .handle{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent)}
+
+  /* FLOW DIAGRAM */
+  .flow{
+    margin-top:40px;
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:40px;
+    overflow-x:auto;
+  }
+  .flow pre{
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;line-height:1.8;color:var(--text);
+    white-space:pre;
+  }
+  .flow .arrow{color:var(--accent)}
+  .flow .label{color:var(--accent-2)}
+  .flow .agent{color:var(--info);font-weight:600}
+
+  /* STEPS */
+  .steps{counter-reset:step;margin-top:40px}
+  .step{
+    display:flex;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:none}
+  .step-num{
+    flex-shrink:0;width:44px;height:44px;border-radius:50%;
+    background:var(--bg-2);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Instrument Serif',serif;font-size:22px;color:var(--accent);
+  }
+  .step-body{flex:1}
+  .step-body h3{margin-bottom:8px}
+
+  /* CODE BLOCK */
+  pre.code{
+    background:var(--bg-3);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 24px;
+    overflow-x:auto;
+    font-size:13px;
+    line-height:1.7;
+    color:#d4d4d8;
+    margin:16px 0;
+  }
+  pre.code .c{color:#6b7280}
+  pre.code .k{color:var(--accent)}
+  pre.code .s{color:var(--ok)}
+
+  /* FAQ */
+  details{
+    background:var(--bg-2);border:1px solid var(--line);border-radius:10px;
+    padding:20px 24px;margin-bottom:12px;
+  }
+  details[open]{border-color:#3a3a44}
+  summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::after{content:'+';color:var(--accent);font-size:24px;transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{margin-top:16px}
+
+  /* TABLE */
+  table{width:100%;border-collapse:collapse;margin-top:24px;font-size:14px}
+  th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+  td code{background:var(--bg-3);padding:2px 6px;border-radius:4px;font-size:12px;color:var(--accent)}
+
+  /* USE CASES */
+  .use-case{
+    display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;
+    padding:20px;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;
+    margin-bottom:12px;
+  }
+  .use-case .q{font-weight:600;color:var(--text);margin-bottom:6px}
+  .use-case .a{color:var(--muted);font-size:14px}
+  .use-case .icon{width:40px;height:40px;border-radius:8px;background:rgba(255,91,46,.15);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700}
+
+  /* ALERT BOX */
+  .alert{
+    padding:24px 28px;border-radius:12px;
+    margin-top:32px;
+  }
+  .alert-danger{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.35)}
+  .alert-warning{background:rgba(255,91,46,.08);border:1px solid rgba(255,91,46,.3)}
+  .alert h4{margin-bottom:8px;font-size:16px}
+  .alert-danger h4{color:var(--danger)}
+  .alert-warning h4{color:var(--accent)}
+  .alert p{color:var(--text);margin-bottom:0}
+
+  /* FOOTER */
+  footer{padding:60px 24px 40px;text-align:center;color:var(--muted);font-size:14px}
+  footer a{color:var(--accent);text-decoration:none}
+
+  /* UTILITIES */
+  .divider{height:1px;background:var(--line);margin:40px 0}
+  ul.clean{list-style:none;padding:0}
+  ul.clean li{padding:10px 0;border-bottom:1px solid var(--line);color:var(--text)}
+  ul.clean li:last-child{border-bottom:none}
+  ul.clean li::before{content:'→ ';color:var(--accent);font-weight:700}
+  .kbd{font-family:'JetBrains Mono',monospace;background:var(--bg-3);border:1px solid var(--line);padding:2px 8px;border-radius:4px;font-size:12px;color:var(--accent)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">Squad<span>Turbo</span> <span style="color:var(--muted);font-weight:400;font-size:13px;margin-left:8px">v2.1</span></div>
+    <ul>
+      <li><a href="#o-que-e">O que é</a></li>
+      <li><a href="#agentes">Agentes</a></li>
+      <li><a href="#fluxo">Como funciona</a></li>
+      <li><a href="#usar">Como usar</a></li>
+      <li><a href="#instalar">Instalar</a></li>
+      <li><a href="#regras">Regras</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span>Squad Turbo v2.1.0 — Turbo Academy</div>
+    <h1>A metodologia da Turbo<br><em>rodando no projeto do seu cliente</em></h1>
+    <p class="lead">Squad Turbo é um time de 10 agentes de IA que carrega a metodologia da Turbo Academy (Lançamento Pago Semanal, Método 5+1, Funil 8) e aplica ela diretamente nos projetos dos seus clientes — dentro do Claude Code, na sua máquina.</p>
+    <div class="cta-row">
+      <a href="#instalar" class="btn btn-primary">Instalar agora →</a>
+      <a href="#o-que-e" class="btn btn-ghost">Entender antes</a>
+    </div>
+  </div>
+</div>
+
+<!-- O QUE É -->
+<section id="o-que-e">
+  <div class="wrap">
+    <div class="eyebrow">O que é um Squad</div>
+    <h2>Pense num time de marketing — só que de IA.</h2>
+    <p class="white" style="max-width:780px;font-size:18px">Num squad de verdade tem estrategista, copywriter, diretor criativo, designer, gestor de tráfego, social media. Cada um com especialidade e autoridade sobre seu território. <strong style="color:var(--text)">Squad Turbo reproduz isso dentro do Claude Code</strong> — 10 agentes que conversam entre si, passam tarefas, respeitam hierarquia e entregam peças prontas.</p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>🧠 Especialistas, não genérico</h3>
+        <p>Cada agente tem um papel único. Copywriter escreve copy. Diretor criativo dá direção visual. Designer executa. Ninguém faz o trabalho do outro.</p>
+      </div>
+      <div class="card">
+        <h3>🔗 Hierarquia real</h3>
+        <p>O estrategista orquestra. O pesquisador segura a fundação. Copy e visual só rodam depois do briefing pronto. Zero peça saindo sem base.</p>
+      </div>
+      <div class="card">
+        <h3>📦 Self-contained</h3>
+        <p>A v2.1 é totalmente independente. Baixou a pasta, colou em <code>~/.claude/squads/</code>, tá rodando. Não depende de nenhuma outra instalação.</p>
+      </div>
+    </div>
+
+    <div class="alert alert-warning" style="margin-top:48px">
+      <h4>⚡ Metodologia da Turbo × Projeto do cliente</h4>
+      <p>A <strong>metodologia</strong> (Lançamento Pago Semanal, Método 5+1, Funil 8) é o que a Turbo Academy te ensinou e está embarcada no squad. O <strong>projeto onde o squad opera</strong> é o do seu cliente (ou o seu, se você é o próprio expert). Na primeira execução em cada projeto, o <code>@pesquisador-turbo</code> monta a fundação daquele cliente (avatar, voz, oferta) em <code>00-fundacao/</code>. É aí que a metodologia vira entrega concreta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AGENTES -->
+<section id="agentes">
+  <div class="wrap">
+    <div class="eyebrow">Os 10 agentes</div>
+    <h2>Quem trabalha no seu squad</h2>
+    <p>Cada agente tem um <strong style="color:var(--text)">tier</strong> (hierarquia) e uma <strong style="color:var(--text)">autoridade</strong> (o que ele pode e não pode mexer).</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <span class="tag tier-0">Tier 0 · Orquestrador</span>
+        <h3>Estrategista Turbo</h3>
+        <div class="handle">@estrategista-turbo</div>
+        <p class="role" style="margin-top:12px">Ponto de entrada. Recebe seu pedido, faz diagnóstico (TYPE/SCOPE/STAGE), checa se a fundação existe, monta o time e delega. <strong style="color:var(--text)">Nunca executa copy ou visual.</strong></p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-0">Tier 0 · Fundação do Projeto</span>
+        <h3>Pesquisador Turbo</h3>
+        <div class="handle">@pesquisador-turbo</div>
+        <p class="role" style="margin-top:12px">Consome material do seu projeto (aulas, docs, copy atual, vídeos) e consolida 6 dossiês em <code>00-fundacao/</code>: voz, avatar, oferta, briefing, referências, inventário. Autoridade exclusiva sobre essa pasta.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-0">Tier 0 · Mercado Externo</span>
+        <h3>Pesquisador de Mercado</h3>
+        <div class="handle">@pesquisador-mercado-turbo</div>
+        <p class="role" style="margin-top:12px">Pesquisa web, concorrência, benchmarks, Meta Ad Library, YouTube. Autoridade exclusiva sobre <code>02-mercado/</code>.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-1">Tier 1 · Copy</span>
+        <h3>Copywriter Turbo</h3>
+        <div class="handle">@copywriter-turbo</div>
+        <p class="role" style="margin-top:12px">Hub de copy: páginas, anúncios, reels, email, WhatsApp, VSL, scripts de workshop, Método 5+1. Lê a fundação antes de escrever.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-1">Tier 1 · Direção Visual</span>
+        <h3>Diretor Criativo Turbo</h3>
+        <div class="handle">@diretor-criativo-turbo</div>
+        <p class="role" style="margin-top:12px">Define paleta, tipografia, composição, moodboard. Recebe copy aprovada, passa brief pro designer. Não toca arquivo — só coordena.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-2">Tier 2 · Execução Visual</span>
+        <h3>Designer Turbo</h3>
+        <div class="handle">@designer-turbo</div>
+        <p class="role" style="margin-top:12px">Produz os arquivos finais: criativos, slides, brandbook, banners, landing pages. Trabalha sob brief do diretor criativo.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-1">Tier 1 · Social</span>
+        <h3>Social Turbo</h3>
+        <div class="handle">@social-turbo</div>
+        <p class="role" style="margin-top:12px">Conteúdo orgânico, reels, carrosséis, stories. Ritmo de perfil e calendário editorial.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-2">Tier 2 · Mídia</span>
+        <h3>Tráfego Turbo</h3>
+        <div class="handle">@trafego-turbo</div>
+        <p class="role" style="margin-top:12px">Campanhas Meta e Google. Estrutura de contas, testes, otimização.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-2">Tier 2 · Automação</span>
+        <h3>Automação Turbo</h3>
+        <div class="handle">@automacao-turbo</div>
+        <p class="role" style="margin-top:12px">n8n, ManyChat, mensageria de lançamento, fluxos WhatsApp, integrações.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tier-3">Tier 3 · Pós-venda</span>
+        <h3>CS Turbo</h3>
+        <div class="handle">@cs-turbo</div>
+        <p class="role" style="margin-top:12px">Customer Success, onboarding de aluno, retenção, comunicação pós-matrícula.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLUXO -->
+<section id="fluxo">
+  <div class="wrap">
+    <div class="eyebrow">Como funciona por dentro</div>
+    <h2>O fluxo de uma peça do começo ao fim</h2>
+    <p>Quando você pede qualquer coisa, esse é o caminho que o squad percorre:</p>
+
+    <div class="flow">
+<pre>
+<span class="label">VOCÊ</span>         →  "preciso de uma página de vendas pro meu workshop"
+     <span class="arrow">↓</span>
+<span class="agent">@estrategista-turbo</span>   →  Diagnostica: TYPE=página, SCOPE=workshop, STAGE=venda
+     <span class="arrow">↓</span>                   →  Checa <span class="label">00-fundacao/</span>
+     <span class="arrow">↓</span>
+  <span class="label">FUNDAÇÃO OK?</span>
+     ├── NÃO →  <span class="agent">@pesquisador-turbo</span>  →  gera 6 dossiês  →  LOCKED
+     └── SIM ↓
+<span class="agent">@copywriter-turbo</span>     →  lê 00-fundacao/  →  escreve copy
+     <span class="arrow">↓</span>
+  <span class="label">VOCÊ APROVA A COPY</span>
+     <span class="arrow">↓</span>
+<span class="agent">@diretor-criativo-turbo</span>  →  define direção visual  →  brief
+     <span class="arrow">↓</span>
+<span class="agent">@designer-turbo</span>     →  executa HTML/arquivos finais
+     <span class="arrow">↓</span>
+<span class="label">/page-optimizer</span>    →  otimiza pra plataforma de destino
+     <span class="arrow">↓</span>
+  <span class="label">PEÇA ENTREGUE ✓</span>
+</pre>
+    </div>
+
+    <div class="alert alert-warning">
+      <h4>⚠️ Regra de ouro: Fundação antes de execução</h4>
+      <p>Nenhuma peça final sai sem <code>00-fundacao/</code> LOCKED. Se faltar, o fluxo para e vai pro pesquisador. Isso não é burocracia — é o que separa copy genérica com cara de IA de copy no tom real do seu expert.</p>
+    </div>
+  </div>
+</section>
+
+<!-- USO -->
+<section id="usar">
+  <div class="wrap">
+    <div class="eyebrow">Como usar na prática</div>
+    <h2>3 formas de chamar o squad</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Invocação direta por agente</h3>
+          <p>Chama o agente pelo handle. Use quando sabe exatamente quem precisa.</p>
+          <pre class="code"><span class="c"># no Claude Code, digita:</span>
+<span class="k">@copywriter-turbo</span> escreve 5 headlines pro meu workshop no tom do expert
+
+<span class="k">@designer-turbo</span> gera um criativo 1080x1350 com paleta do brandbook</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Pela porta da frente (recomendado)</h3>
+          <p>Pede normal. O <code>@estrategista-turbo</code> diagnostica e delega pra quem precisa.</p>
+          <pre class="code"><span class="c"># exemplo:</span>
+preciso lançar meu workshop semana que vem, me ajuda a montar o funil completo</pre>
+          <p style="margin-top:8px;font-size:14px">Ele vai checar fundação, escolher o funil certo (Método 5+1, Funil 8, Workshop), montar o time e orquestrar.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Via slash commands (skills)</h3>
+          <p>O squad vem com 20 skills prontas pra tarefas específicas.</p>
+          <ul class="clean" style="margin-top:12px">
+            <li><span class="kbd">/designer-senior</span> — landing pages HTML com Protocolo Anti-IA</li>
+            <li><span class="kbd">/gerador-instagram</span> — carrosséis do Instagram</li>
+            <li><span class="kbd">/criador-reels</span> — roteiros de reels</li>
+            <li><span class="kbd">/page-optimizer</span> — otimização pós-aprovação</li>
+            <li><span class="kbd">/lancamento-pago-semanal</span> — fluxo completo do método</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3 style="margin-top:40px">Casos de uso típicos</h3>
+    <div style="margin-top:24px">
+      <div class="use-case">
+        <div class="icon">LP</div>
+        <div>
+          <div class="q">"Preciso de uma landing page pro workshop"</div>
+          <div class="a">@estrategista → (fundação) → @copywriter → aprovação → @diretor-criativo → @designer → /page-optimizer</div>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="icon">AD</div>
+        <div>
+          <div class="q">"Quero rodar criativo estático no Meta"</div>
+          <div class="a">@copywriter-turbo (headline + copy) → @diretor-criativo (direção) → @designer-turbo (arte final 1:1 ou 4:5)</div>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="icon">IG</div>
+        <div>
+          <div class="q">"Me dá um carrossel sobre o tema X"</div>
+          <div class="a">@social-turbo (estrutura) + /gerador-instagram (execução) — 8 slides no tom do expert</div>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="icon">WP</div>
+        <div>
+          <div class="q">"Montar mensageria do grupo WhatsApp do evento"</div>
+          <div class="a">@copywriter-turbo (cadência de mensagens) → @automacao-turbo (fluxo n8n/ManyChat)</div>
+        </div>
+      </div>
+      <div class="use-case">
+        <div class="icon">RS</div>
+        <div>
+          <div class="q">"Pesquisa de concorrência no meu nicho"</div>
+          <div class="a">@pesquisador-mercado-turbo → relatório em <code>02-mercado/</code> com Meta Ad Library + YouTube + fóruns</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALAR -->
+<section id="instalar">
+  <div class="wrap">
+    <div class="eyebrow">Instalação</div>
+    <h2>Como baixar e instalar</h2>
+    <p>O Squad Turbo é distribuído pelo GitHub oficial da Turbo Academy. Duas formas de instalar:</p>
+
+    <h3 style="margin-top:32px">Opção A — Via Git (recomendado)</h3>
+    <p>Se você tem git instalado, é a forma mais rápida — e o único jeito de receber atualizações com um comando só.</p>
+    <pre class="code"><span class="c"># 1. Cria a pasta de squads (se não existir)</span>
+mkdir -p ~/.claude/squads
+
+<span class="c"># 2. Clona o repositório</span>
+cd ~/.claude/squads
+git clone https://github.com/Turbo-Academy/squad-turbo.git
+
+<span class="c"># 3. Verifica que funcionou</span>
+ls ~/.claude/squads/squad-turbo/
+<span class="c"># deve listar: agents/ skills/ core/ squad.yaml ...</span></pre>
+
+    <h3 style="margin-top:40px">Opção B — Download ZIP</h3>
+    <p>Sem git? Sem problema.</p>
+    <ol style="color:var(--text);padding-left:20px;line-height:2">
+      <li>Acessa <a href="https://github.com/Turbo-Academy/squad-turbo" style="color:var(--accent)">github.com/Turbo-Academy/squad-turbo</a></li>
+      <li>Clica no botão verde <strong>Code → Download ZIP</strong></li>
+      <li>Descompacta o arquivo</li>
+      <li>Renomeia a pasta pra <code>squad-turbo</code> (remove o <code>-main</code> do fim)</li>
+      <li>Move pra <code>~/.claude/squads/squad-turbo/</code></li>
+    </ol>
+
+    <h3 style="margin-top:40px">Atualizando o squad</h3>
+    <p>O squad é atualizado com frequência pela equipe da Turbo Academy — novos agentes, skills, correções, melhorias no método. Atualize sempre que começar um projeto novo.</p>
+    <pre class="code"><span class="c"># se instalou via git (1 comando):</span>
+cd ~/.claude/squads/squad-turbo
+git pull
+
+<span class="c"># se instalou via ZIP:</span>
+<span class="c"># baixa o ZIP novo e substitui a pasta inteira</span></pre>
+
+    <h3 style="margin-top:40px">Verificando instalação</h3>
+    <p>Abre o Claude Code numa pasta qualquer e digita:</p>
+    <pre class="code">@estrategista-turbo oi, lista os agentes do squad</pre>
+    <p>Se ele responder listando os 10 agentes, tá tudo certo. Se disser que não conhece o agente, reinicia o Claude Code e confere o caminho <code>~/.claude/squads/squad-turbo/</code>.</p>
+  </div>
+</section>
+
+<!-- STACK -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">O que vem dentro</div>
+    <h2>Estrutura da pasta</h2>
+    <pre class="code">~/.claude/squads/squad-turbo/
+├── squad.yaml              <span class="c"># manifest — 10 agentes, 20 skills</span>
+├── config.yaml             <span class="c"># configurações</span>
+├── README.md               <span class="c"># guia de onboarding</span>
+├── agents/                 <span class="c"># os 10 agentes (.md)</span>
+│   ├── estrategista-turbo.md
+│   ├── pesquisador-turbo.md
+│   ├── pesquisador-mercado-turbo.md
+│   ├── copywriter-turbo.md
+│   ├── diretor-criativo-turbo.md
+│   ├── designer-turbo.md
+│   ├── social-turbo.md
+│   ├── trafego-turbo.md
+│   ├── automacao-turbo.md
+│   └── cs-turbo.md
+├── skills/                 <span class="c"># 20 skills invocáveis via /comando</span>
+│   └── _shared/            <span class="c"># frameworks compartilhados</span>
+└── core/
+    ├── constitution.md     <span class="c"># 7 artigos inegociáveis</span>
+    ├── templates/          <span class="c"># briefings, avatar, oferta, funil</span>
+    ├── checklists/         <span class="c"># qualidade, aprovação, lançamento</span>
+    └── frameworks/         <span class="c"># Brunson, Todd Brown etc.</span></pre>
+  </div>
+</section>
+
+<!-- REGRAS -->
+<section id="regras">
+  <div class="wrap">
+    <div class="eyebrow">O que você pode e não pode fazer</div>
+    <h2>Regras de uso</h2>
+
+    <div class="alert alert-danger">
+      <h4>🚫 Não modifique os arquivos do squad</h4>
+      <p><strong>Agentes, skills, constitution, templates e frameworks são propriedade da Turbo Academy e recebem atualizações constantes</strong> do time do Leo — ajustes no método, novos agentes, correções, evolução das skills. Se você editar qualquer arquivo da pasta <code>~/.claude/squads/squad-turbo/</code>, na próxima atualização (<code>git pull</code>) você vai ter conflito ou perder suas alterações. Trate a pasta como <strong>somente-leitura</strong>.</p>
+    </div>
+
+    <div class="alert alert-warning">
+      <h4>✅ O que VOCÊ manda:</h4>
+      <p style="margin-bottom:0">Tudo que está dentro da pasta do SEU projeto: <code>00-fundacao/</code> (seu avatar, voz, oferta), <code>02-mercado/</code>, copy final, páginas, criativos, briefings. O squad é a ferramenta. O conteúdo do seu projeto é seu.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3 style="margin-top:40px">Se precisar customizar algo</h3>
+    <ul class="clean" style="margin-top:16px">
+      <li>Quer um comportamento diferente? Crie um agente derivado no SEU projeto (ex: <code>meu-projeto/.claude/agents/copywriter-custom.md</code>) em vez de editar o original.</li>
+      <li>Quer uma skill nova? Mesma lógica — crie dentro do seu projeto, não dentro do squad.</li>
+      <li>Encontrou bug ou tem sugestão? Manda pro canal oficial de suporte da Turbo Academy. Quem atualiza o squad é o time do Leo.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3 style="margin-top:40px">Regras inegociáveis do squad</h3>
+    <ul class="clean" style="margin-top:16px">
+      <li><strong>Fundação antes de execução</strong> — sem <code>00-fundacao/</code> LOCKED, nenhuma peça final sai</li>
+      <li><strong>Zero invenção</strong> — nunca fabricar depoimentos, métricas ou resultados</li>
+      <li><strong>Tom do expert</strong> — copy no tom do expert do seu projeto (de <code>voz.md</code>), nunca genérico</li>
+      <li><strong>Protocolo Anti-IA visual</strong> — zero elemento com cara de IA em qualquer peça visual</li>
+      <li><strong>Uma variável por teste</strong> — mudou duas coisas ao mesmo tempo, não sabe o que funcionou</li>
+      <li><strong>Português sempre</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Dúvidas comuns</div>
+    <h2>FAQ</h2>
+
+    <div style="margin-top:40px">
+      <details>
+        <summary>Preciso pagar alguma coisa além do Claude?</summary>
+        <p>Não. O Squad Turbo é distribuído gratuitamente pelos canais oficiais da Turbo Academy pros alunos. Você só precisa ter o Claude Code instalado (plano Pro ou superior recomendado pra uso intenso).</p>
+      </details>
+
+      <details>
+        <summary>Qual a diferença entre "agente" e "skill"?</summary>
+        <p><strong>Agente</strong> = trabalhador autônomo com papel e autoridade (ex: <code>@copywriter-turbo</code>). Você conversa com ele.<br><strong>Skill</strong> = prompt especializado invocado por slash command (ex: <code>/gerador-instagram</code>). É uma ferramenta que os agentes (ou você) podem usar.</p>
+      </details>
+
+      <details>
+        <summary>Posso usar o Squad Turbo no projeto do meu cliente?</summary>
+        <p>Sim — é exatamente pra isso. O squad carrega a metodologia da Turbo e aplica no projeto que você estiver operando. Na primeira vez em cada cliente, o <code>@pesquisador-turbo</code> pede o material bruto (aulas, páginas atuais, copy, lives, VoC) e consolida a <code>00-fundacao/</code> daquele cliente específico. A partir daí, todos os agentes produzem no tom e no contexto corretos daquele projeto. Você pode atender múltiplos clientes, cada um na sua própria pasta.</p>
+      </details>
+
+      <details>
+        <summary>O que é "fundação LOCKED"?</summary>
+        <p>É quando os 6 dossiês em <code>00-fundacao/</code> (voz, avatar, oferta, briefing, referências, inventário) foram consolidados pelo <code>@pesquisador-turbo</code> e validados por você. Sem isso, nenhuma peça final sai — porque sem fundação a copy vira genérica com cara de IA.</p>
+      </details>
+
+      <details>
+        <summary>O squad funciona offline?</summary>
+        <p>A estrutura fica na sua máquina (offline), mas os agentes rodam no Claude, que precisa de internet. O <code>@pesquisador-mercado-turbo</code> depende de WebSearch pra funcionar.</p>
+      </details>
+
+      <details>
+        <summary>Como atualizo pra uma versão nova?</summary>
+        <p>Se instalou via git, <code>git pull</code> dentro da pasta. Se foi ZIP, baixa a versão nova e substitui. O time do Leo atualiza com frequência — vale atualizar toda vez que começar um projeto novo.</p>
+      </details>
+
+      <details>
+        <summary>Posso modificar os agentes ou as skills?</summary>
+        <p><strong>Não.</strong> A pasta <code>~/.claude/squads/squad-turbo/</code> é mantida pelo time do Leo e recebe atualizações constantes. Qualquer edição sua nos arquivos do squad será perdida no próximo <code>git pull</code> (ou dará conflito). Se quiser customizar comportamento, crie agentes/skills derivados dentro do SEU projeto — nunca dentro da pasta do squad. Tem sugestão ou bug? Manda no canal de suporte oficial.</p>
+      </details>
+
+      <details>
+        <summary>O que fazer se o agente não responder?</summary>
+        <p>Três checks: (1) pasta está em <code>~/.claude/squads/squad-turbo/</code>? (2) reinicia o Claude Code; (3) confere se o nome do agente está com <code>@</code> na frente e o handle exato (ex: <code>@copywriter-turbo</code>, não <code>@copy</code>). Se persistir, manda pro suporte.</p>
+      </details>
+
+      <details>
+        <summary>Meus arquivos ficam dentro da pasta do squad?</summary>
+        <p><strong>Não.</strong> Seus projetos ficam onde você quiser (ex: <code>~/Projetos/lancamento-cliente-x/</code>). O squad é instalado uma vez em <code>~/.claude/squads/squad-turbo/</code> e serve todos os seus projetos. Cada projeto tem seu próprio <code>00-fundacao/</code>, <code>02-mercado/</code>, copy, páginas, etc.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong style="color:var(--text);font-family:'Instrument Serif',serif;font-size:20px">Squad Turbo v2.1.0</strong></p>
+  <p style="margin-top:8px">Turbo Academy</p>
+  <p style="margin-top:8px">Repositório oficial: <a href="https://github.com/Turbo-Academy/squad-turbo">github.com/Turbo-Academy/squad-turbo</a></p>
+  <p style="margin-top:24px;font-size:12px;color:var(--muted)">Distribuído self-contained · 10 agentes · 20 skills · atualizado pelo time da Turbo Academy</p>
+</footer>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 # OFERTA — {NOME DO PROJETO}
 
-> Responsável: @estrategista-emb (usando framework Hormozi)
+> Responsável: @estrategista-turbo (usando framework Hormozi)
 > Referência: ~/.claude/skills/_shared/hormozi-offer.md
 
 ---

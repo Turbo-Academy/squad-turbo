@@ -1,4 +1,4 @@
-# Performance Budgets — EMB
+# Performance Budgets — Squad Turbo
 
 Budget não é sugestão, é contrato. Se estoura, a página não sobe.
 
@@ -6,7 +6,7 @@ Budget não é sugestão, é contrato. Se estoura, a página não sobe.
 
 Sem budget, otimização vira negociação. "Só mais 20KB aqui, só mais um script ali" — e a página volta a pesar 3MB em 2 meses. Budget é a ferramenta que mata esse drift.
 
-## Budgets padrão EMB (2026)
+## Budgets padrão Squad Turbo (2026)
 
 | Recurso           | Mobile | Desktop | Por quê |
 |-------------------|--------|---------|---------|

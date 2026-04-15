@@ -1,6 +1,6 @@
-# Checklist: Aprovação de Estratégia — EMB
+# Checklist: Aprovação de Estratégia — Turbo
 
-> Responsável: @estrategista-emb → Dono
+> Responsável: @estrategista-turbo → Dono
 
 ## Briefing
 - [ ] Questionário Expert completo (21 perguntas)?
@@ -24,6 +24,6 @@
 - [ ] Métricas de sucesso claras?
 
 ## Aprovação
-- [ ] @estrategista-emb revisou e aprovou
+- [ ] @estrategista-turbo revisou e aprovou
 - [ ] Dono revisou e aprovou
 - Data de aprovação:

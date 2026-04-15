@@ -1,7 +1,7 @@
 # QUESTIONÁRIO DO EXPERT — {NOME DO EXPERT}
 
 > Objetivo: Extrair a voz autêntica do expert para construção de toda a copy
-> Responsável: @estrategista-emb (durante onboarding)
+> Responsável: @estrategista-turbo (durante onboarding)
 > Regra: Todas as respostas contadas em formato de HISTÓRIA
 
 ---

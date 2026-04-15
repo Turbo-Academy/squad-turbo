@@ -1,6 +1,6 @@
 # BRIEFING DE COPY — {NOME DO PROJETO}
 
-> Responsável: @estrategista-emb + @copywriter-emb
+> Responsável: @estrategista-turbo + @copywriter-turbo
 > Pré-requisito: BRIEFING-ESTRATÉGICO aprovado
 
 ---

@@ -1,7 +1,7 @@
 # PASSAGEM DE LEAD — Qualificação → Fechamento
 
-> Responsável: DONO (manual) / [F] @sdr-emb → @closer-emb
-> Nota: No EMB atual, o dono gerencia qualificação e vendas manualmente
+> Responsável: DONO (manual) / [F] @sdr-turbo → @closer-turbo
+> Nota: No Squad Turbo atual, o dono gerencia qualificação e vendas manualmente
 
 ---
 

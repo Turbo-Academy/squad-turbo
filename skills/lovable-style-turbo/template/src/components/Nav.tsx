@@ -17,7 +17,7 @@ export function Nav() {
     >
       <nav className="mx-auto flex h-16 max-w-container-xl items-center justify-between px-6">
         <a href="#" className="font-semibold tracking-tight">
-          <span className="text-gradient">EMB</span>
+          <span className="text-gradient">TURBO</span>
         </a>
         <ul className="hidden items-center gap-8 text-sm text-fg-muted md:flex">
           <li><a href="#features" className="transition-colors hover:text-fg">Features</a></li>

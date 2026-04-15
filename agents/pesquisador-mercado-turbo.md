@@ -71,7 +71,6 @@ Cada frente pode ser rodada isolada (missão parcial) ou todas juntas (missão c
 - **Meta Ad Library** (via WebFetch: `facebook.com/ads/library/?q=...`) — ads ativos de concorrentes
 - **YouTube** — `yt-search` skill + transcripts para analisar conteúdo de concorrentes
 - **Reddit BR / fóruns** — WebFetch em threads públicas (r/brasil, r/empreendedorismo, r/InvestimentoBrasil, r/brdev etc.)
-- **Vault-EMB** — quando descubro insight útil, capturo via `/capturar-nota` em `~/Obsidian/Vault-EMB/temporarias/`
 
 **Ordem de uso padrão:**
 1. `WebSearch` para descobrir fontes

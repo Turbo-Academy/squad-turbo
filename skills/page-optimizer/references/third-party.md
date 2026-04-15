@@ -1,4 +1,4 @@
-# Third-Party Scripts — Estratégia EMB
+# Third-Party Scripts — Estratégia Squad Turbo
 
 Scripts de terceiros são o principal assassino de INP em 2026. GTM, Meta Pixel, TikTok Pixel, Hotjar, YouTube embeds, chat widgets — tudo isso ocupa main thread e mata responsividade.
 

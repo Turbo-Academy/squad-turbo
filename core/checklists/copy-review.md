@@ -1,6 +1,6 @@
-# Checklist: Revisão de Copy — EMB
+# Checklist: Revisão de Copy — Turbo
 
-> Responsável: @estrategista-emb (revisão) + @copywriter-emb (autor)
+> Responsável: @estrategista-turbo (revisão) + @copywriter-turbo (autor)
 > Score mínimo: 80% para aprovação
 
 ## Fundamentos (6 itens)

@@ -1,6 +1,6 @@
 # FUNIL — {NOME DO PROJETO}
 
-> Responsável: @estrategista-emb
+> Responsável: @estrategista-turbo
 > Referência: ~/.claude/skills/_shared/emb-funnel-workflows.md
 
 ---
@@ -46,13 +46,13 @@
 - **Upsell:**
 - **Downsell:**
 
-## Squad do Funil (EMB)
+## Squad do Funil (Turbo)
 
 | Agente | Responsabilidade |
 |--------|-----------------|
-| @estrategista-emb | Arquitetura, pesquisa e revisão |
-| @copywriter-emb | Copy de todas as peças |
-| @diretor-criativo-emb | Criativos, brandbook e páginas HTML |
+| @estrategista-turbo | Arquitetura, pesquisa e revisão |
+| @copywriter-turbo | Copy de todas as peças |
+| @diretor-criativo-turbo | Criativos, brandbook e páginas HTML |
 | DONO | Tráfego pago |
 | DONO | Automações e sequências |
 | DONO | Vendas (se high ticket) |

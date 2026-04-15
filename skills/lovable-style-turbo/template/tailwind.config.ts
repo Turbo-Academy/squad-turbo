@@ -1,10 +1,9 @@
 import type { Config } from 'tailwindcss'
-// Ajuste o caminho para onde a skill design-tokens-emb está no seu sistema:
-// Por padrão: ~/.claude/emb/skills/design-tokens-emb/tailwind.preset.js
-// Recomendação: copie a pasta design-tokens-emb para dentro do projeto em /tokens
-import embPreset from './tokens/tailwind.preset.js'
+// Tokens copiados pelo setup da skill lovable-style-turbo.
+// Fonte: ~/.claude/squads/squad-turbo/skills/design-tokens-turbo/tailwind.preset.js
+import turboPreset from './tokens/tailwind.preset.js'
 
 export default {
-  presets: [embPreset],
+  presets: [turboPreset],
   content: ['./index.html', './src/**/*.{ts,tsx}'],
 } satisfies Config

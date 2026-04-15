@@ -1,6 +1,6 @@
 # BRIEFING ESTRATÉGICO — {NOME DO PROJETO}
 
-> Responsável: @estrategista-emb
+> Responsável: @estrategista-turbo
 > Pré-requisito: Questionário do Expert preenchido
 
 ---
@@ -57,11 +57,11 @@
 - **ROAS-alvo:**
 - **Taxa de conversão esperada:**
 
-## 8. Squad EMB
+## 8. Squad Turbo
 
-- **Agentes ativos:** @estrategista-emb, @copywriter-emb, @diretor-criativo-emb
-- **Tarefas para DONO:** (tráfego, automações, vendas, etc.)
-- **Dependências externas:**
+- **Agentes ativos:** @estrategista-turbo, @pesquisador-turbo, @copywriter-turbo, @diretor-criativo-turbo, @designer-turbo, @social-turbo, @trafego-turbo, @automacao-turbo, @cs-turbo
+- **Tarefas para o DONO:** (decisões de marca, aprovações finais, integrações de conta)
+- **Dependências externas:** (contas de anúncio, domínios, ferramentas)
 
 ## 9. Cronograma
 
@@ -77,6 +77,6 @@
 ---
 
 **Aprovação:**
-- [ ] @estrategista-emb aprovou
+- [ ] @estrategista-turbo aprovou
 - [ ] Dono aprovou
 - **Data:**

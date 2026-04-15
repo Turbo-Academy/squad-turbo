@@ -1,7 +1,7 @@
 # Unique Mechanism — Framework Todd Brown
 
 > Baseado no E5 Method de Todd Brown
-> Adaptado para Squad EMB — @estrategista-emb identifica, @copywriter-emb aplica na copy
+> Adaptado para Squad Turbo — @estrategista-turbo identifica, @copywriter-turbo aplica na copy
 
 ## Conceito
 
@@ -49,12 +49,12 @@ O Mecanismo Único é a RAZÃO pela qual sua solução funciona quando todas as 
 3. É diferenciável? — É claramente diferente do que já existe?
 4. É defensável? — Você consegue provar que funciona?
 
-## Aplicação no EMB
+## Aplicação no Squad Turbo
 
 | Momento | Executor | Como |
 |---------|----------|------|
-| Identificação durante briefing | @estrategista-emb | `/briefing-expert` pergunta 2, 5, 6, 16 |
-| Construção do zero (expert novo) | @estrategista-emb | `/mentor-doug` — Camada 2 |
-| Aplicação na copy (E5 no body) | @copywriter-emb | `/criador-paginas-low-ticket`, `/copywriter-senior` |
-| Hook de criativo com mecanismo | @copywriter-emb | `/criador-criativos` |
-| Webinar — História 2 (Veículo) | @copywriter-emb | `/copywriter-senior` |
+| Identificação durante briefing | @estrategista-turbo | `/briefing-expert` pergunta 2, 5, 6, 16 |
+| Construção do zero (expert novo) | @estrategista-turbo | `/mentor-doug` — Camada 2 |
+| Aplicação na copy (E5 no body) | @copywriter-turbo | `/criador-paginas-low-ticket`, `/copywriter-senior` |
+| Hook de criativo com mecanismo | @copywriter-turbo | `/criador-criativos` |
+| Webinar — História 2 (Veículo) | @copywriter-turbo | `/copywriter-senior` |

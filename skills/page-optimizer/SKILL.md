@@ -1,14 +1,14 @@
 ---
 name: page-optimizer
-description: "Otimiza páginas do EMB para Core Web Vitals, PageSpeed e GTmetrix. Mede baseline real antes de otimizar, aplica performance budgets, prioriza por impacto em LCP/INP/CLS e fecha com re-medição. Pergunta plataforma de destino antes de iniciar."
+description: "Otimiza páginas do Squad Turbo para Core Web Vitals, PageSpeed e GTmetrix. Mede baseline real antes de otimizar, aplica performance budgets, prioriza por impacto em LCP/INP/CLS e fecha com re-medição. Pergunta plataforma de destino antes de iniciar."
 allowed-tools: Read Write Edit Bash Glob Grep WebFetch
 metadata:
-  owner: "EMB — Squad Emanuel Brandão"
+  owner: "Squad Turbo — Turbo Academy"
   version: "1.0"
   created: "2026-04-10"
 ---
 
-# Page Optimizer EMB
+# Page Optimizer Turbo
 
 Otimização de páginas que **mede antes, corrige com base em dados e re-mede no fim**. Zero estimativa, zero chute, zero promessa vazia.
 
@@ -298,7 +298,7 @@ Se alguma métrica não passou, **voltar para Fase 3** com foco nela. Não entre
 ### 6.3 Relatório final (template)
 
 ```markdown
-## Page Optimizer EMB — Relatório
+## Page Optimizer Turbo — Relatório
 
 **Página:** {nome}
 **Plataforma:** {plataforma}
@@ -369,14 +369,14 @@ Salvar em `projects/{slug}/05-paginas/relatorio-performance.md`.
 - [ ] Limitações documentadas no relatório
 - [ ] Score dentro do teto realista
 
-### Anti-IA (EMB NON-NEGOTIABLE)
+### Anti-IA (Turbo NON-NEGOTIABLE)
 - [ ] Hero é imagem original (não stock genérico)
 - [ ] Hero original cabe no budget (comprimido + formato moderno)
 - [ ] Fontes do brandbook, sem fallback genérico visível
 
 ---
 
-## Integração com o Squad EMB
+## Integração com o Squad Turbo
 
 - Invocada pelo `@diretor-criativo-emb` após aprovação visual da página pelo dono
 - Pergunta plataforma ao dono (regra operacional 6 do CLAUDE.md)
@@ -386,4 +386,4 @@ Salvar em `projects/{slug}/05-paginas/relatorio-performance.md`.
 
 ---
 
-*Page Optimizer EMB v1.0 — Squad Emanuel Brandão*
+*Page Optimizer Turbo v1.0 — Squad Turbo / Turbo Academy*

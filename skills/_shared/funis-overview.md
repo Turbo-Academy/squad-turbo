@@ -1,4 +1,4 @@
-# Visão Geral dos Funis — Referência do Estrategista EMB
+# Visão Geral dos Funis — Referência do Estrategista Turbo
 
 ## Mapa de Decisão
 
@@ -25,7 +25,7 @@ QUAL É O OBJETIVO PRINCIPAL?
 | **Quiz Funnel** | Qualquer | Contínuo | Segmentar leads por perfil antes de oferecer. |
 | **Low Ticket / Tripwire** | R$27–197 | Contínuo | Quebrar barreira de primeira compra. Qualifica compradores. |
 
-**Skills EMB relevantes:** `/criador-paginas-low-ticket`, `/criador-criativos`, `/mensageria-lancamento`
+**Skills Turbo relevantes:** `/criador-paginas-low-ticket`, `/criador-criativos`, `/mensageria-lancamento`
 
 ---
 
@@ -38,7 +38,7 @@ QUAL É O OBJETIVO PRINCIPAL?
 | **Seed Launch** | R$200–2K | 3–7 sem | Validar produto antes de criar. Vende antes de produzir. |
 | **Meteórico (WhatsApp)** | R$200–2K | 3–7 dias | Lançamento rápido via grupo de WhatsApp. Urgência máxima. |
 
-**Skills EMB relevantes:** `/lancamento-pago-semanal`, `/mensageria-lancamento`, `/criador-criativos`
+**Skills Turbo relevantes:** `/lancamento-pago-semanal`, `/mensageria-lancamento`, `/criador-criativos`
 
 ---
 
@@ -53,7 +53,7 @@ QUAL É O OBJETIVO PRINCIPAL?
 | **Imersão Paga** | R$297–10K | 2–5 dias | Evento intensivo. Alto valor percebido. |
 | **Evento Presencial** | R$1K–50K+ | 6–8 sem | Conferência, imersão física, mastermind presencial. |
 
-**Skills EMB relevantes:** `/lancamento-pago-semanal`, `/mensageria-lancamento`, `/criador-criativos`
+**Skills Turbo relevantes:** `/lancamento-pago-semanal`, `/mensageria-lancamento`, `/criador-criativos`
 
 ---
 
@@ -65,7 +65,7 @@ QUAL É O OBJETIVO PRINCIPAL?
 | **Venda Interna** | Qualquer | Contínuo | Vender para base existente (upsell, cross-sell). |
 | **Campanha Rápida** | R$200–2K | 1–3 dias | Queima de estoque, data especial, oferta relâmpago. |
 
-**Skills EMB relevantes:** `/criador-paginas-low-ticket`, `/criador-criativos`, `/mensageria-lancamento`
+**Skills Turbo relevantes:** `/criador-paginas-low-ticket`, `/criador-criativos`, `/mensageria-lancamento`
 
 ---
 
@@ -78,7 +78,7 @@ QUAL É O OBJETIVO PRINCIPAL?
 | **Sala Secreta (VIP)** | R$2K–50K+ | 1–2 sem | Grupo ou evento exclusivo para lista interna. |
 | **High Ticket** | R$3K–50K+ | 1–2 sem | Mentoria, programa intensivo, consultoria. |
 
-**Skills EMB relevantes:** `/mentor-doug`, `/briefing-expert`, `/criador-criativos`
+**Skills Turbo relevantes:** `/mentor-doug`, `/briefing-expert`, `/criador-criativos`
 
 ---
 
@@ -88,7 +88,7 @@ QUAL É O OBJETIVO PRINCIPAL?
 |-------|--------|----------|-------------|
 | **Serviços (Freelancer/Agência)** | R$500–20K+ | 1–3 sem | Freelancer ou agência vendendo serviço recorrente ou projeto. |
 
-**Skills EMB relevantes:** `/mentor-doug`, `/briefing-expert`
+**Skills Turbo relevantes:** `/mentor-doug`, `/briefing-expert`
 
 ---
 

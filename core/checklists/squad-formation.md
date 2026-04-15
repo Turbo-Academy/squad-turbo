@@ -1,17 +1,20 @@
-# Checklist: Formação de Squad — EMB
+# Checklist: Formação de Squad — Turbo
 
-> Responsável: @estrategista-emb
+> Responsável: @estrategista-turbo
 
 ## Pré-requisitos
-- [ ] Briefing aprovado?
-- [ ] Tipo de funil definido?
+- [ ] Fundação `00-fundacao/` LOCKED?
+- [ ] Tipo de funil definido (5+1 / Workshop / Funil 8)?
 
-## Squad EMB
-- [ ] @estrategista-emb ativo (diagnóstico + orquestração)?
-- [ ] @copywriter-emb ativo (hub de copy)?
-- [ ] @diretor-criativo-emb ativo (visual + páginas)?
+## Squad Turbo
+- [ ] @estrategista-turbo ativo (triage + orquestração)?
+- [ ] @pesquisador-turbo já entregou `00-fundacao/` LOCKED?
+- [ ] @copywriter-turbo ativo (hub de copy)?
+- [ ] @diretor-criativo-turbo ativo (direção visual)?
+- [ ] @designer-turbo ativo (execução visual)?
+- [ ] Outros agentes (social / tráfego / automação / cs) acionados conforme fase?
 - [ ] Skills necessárias identificadas?
-- [ ] Ordem de execução definida (consultar emb-funnel-workflows.md)?
+- [ ] Ordem de execução definida (consultar `skills/_shared/turbo-funnel-workflows.md`)?
 - [ ] Tarefas marcadas como DONO identificadas e comunicadas?
 
 ## Estrutura

@@ -1,6 +1,6 @@
 # SQUAD — {NOME DO PROJETO}
 
-> Responsável: @estrategista-emb
+> Responsável: @estrategista-turbo
 
 ---
 
@@ -15,13 +15,20 @@
 - **Criado em:**
 - **Pasta:** `projects/{YYYY-MM}-{slug}/`
 
-## Squad EMB Escalado
+## Squad Turbo Escalado
 
 | Agente | Função no Projeto | Pasta | Status |
 |--------|------------------|-------|--------|
-| @estrategista-emb | Orquestração, pesquisa e revisão | `00-briefing/` + `02-estrategia/` | |
-| @copywriter-emb | Copy de todas as peças | `03-copy/` | |
-| @diretor-criativo-emb | Criativos, brand e páginas HTML | `04-criativos/` + `05-paginas/` | |
+| @estrategista-turbo | Orquestração e triage | `02-estrategia/` | |
+| @pesquisador-turbo | Fundação do expert | `00-fundacao/` + `01-extratos/` | |
+| @pesquisador-mercado-turbo | Inteligência competitiva | `02-mercado/` | |
+| @copywriter-turbo | Copy de todas as peças | `03-copy/` | |
+| @diretor-criativo-turbo | Direção visual | `04-direcao/` | |
+| @designer-turbo | Execução visual (criativos, slides, páginas) | `05-visual/` | |
+| @social-turbo | Conteúdo orgânico (reels, stories) | `06-social/` | |
+| @trafego-turbo | Tráfego pago | `07-trafego/` | |
+| @automacao-turbo | Mensageria e automações | `08-automacao/` | |
+| @cs-turbo | Pós-venda | `09-cs/` | |
 
 ## Tarefas do DONO (manual)
 
@@ -60,16 +67,16 @@ projects/{YYYY-MM}-{slug}/
 
 | # | Peça | Responsável | Pasta | Status |
 |---|------|------------|-------|--------|
-| 1 | Briefing Estratégico | @estrategista-emb | `00-briefing/` | |
-| 2 | Briefing de Copy | @estrategista-emb | `00-briefing/` | |
-| 3 | Avatar | @estrategista-emb | `00-briefing/` | |
-| 4 | Oferta | @estrategista-emb | `00-briefing/` | |
-| 5 | Definição de Funil | @estrategista-emb | `02-estrategia/` | |
-| 6 | Brandbook | @diretor-criativo-emb | `04-criativos/brandbook/` | |
-| 7 | Copy das Páginas | @copywriter-emb | `03-copy/` | |
-| 8 | Sequência de Emails | @copywriter-emb | `03-copy/emails/` | |
-| 9 | Landing Pages HTML | @diretor-criativo-emb | `05-paginas/` | |
-| 10 | Criativos de Ads | @diretor-criativo-emb | `04-criativos/ads/` | |
+| 1 | Briefing Estratégico | @estrategista-turbo | `00-briefing/` | |
+| 2 | Briefing de Copy | @estrategista-turbo | `00-briefing/` | |
+| 3 | Avatar | @estrategista-turbo | `00-briefing/` | |
+| 4 | Oferta | @estrategista-turbo | `00-briefing/` | |
+| 5 | Definição de Funil | @estrategista-turbo | `02-estrategia/` | |
+| 6 | Brandbook | @diretor-criativo-turbo | `04-criativos/brandbook/` | |
+| 7 | Copy das Páginas | @copywriter-turbo | `03-copy/` | |
+| 8 | Sequência de Emails | @copywriter-turbo | `03-copy/emails/` | |
+| 9 | Landing Pages HTML | @diretor-criativo-turbo | `05-paginas/` | |
+| 10 | Criativos de Ads | @diretor-criativo-turbo | `04-criativos/ads/` | |
 | 11 | Campanhas de Tráfego | DONO | `07-trafego/` | |
 | 12 | Automações | DONO | `06-automacoes/` | |
 

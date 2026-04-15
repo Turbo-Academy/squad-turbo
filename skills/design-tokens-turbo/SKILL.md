@@ -1,15 +1,15 @@
 ---
 name: design-tokens-emb
-description: Camada EMB de design tokens — paletas prontas (neutro-pro, editorial-warm, neon-dark), preset Tailwind plug-and-play e tokens base (cor OKLCH, espaçamento 4/8pt, escala tipográfica 1.25, radius, shadow, motion). Use SEMPRE que iniciar uma página, componente ou peça visual nova no squad EMB para garantir coerência automática. Complementa a skill `design-system` (claudekit) com paletas e presets calibrados para os experts EMB.
+description: Camada Turbo de design tokens — paletas prontas (neutro-pro, editorial-warm, neon-dark), preset Tailwind plug-and-play e tokens base (cor OKLCH, espaçamento 4/8pt, escala tipográfica 1.25, radius, shadow, motion). Use SEMPRE que iniciar uma página, componente ou peça visual nova no Squad Turbo para garantir coerência automática. Complementa a skill `design-system` (claudekit) com paletas e presets calibrados para os experts do Squad Turbo.
 license: MIT
 metadata:
-  author: Squad EMB
+  author: Squad Turbo
   version: "1.0.0"
 ---
 
-# Design Tokens EMB
+# Design Tokens Turbo
 
-Tokens base + paletas EMB. Toda peça visual nova começa importando daqui.
+Tokens base + paletas Turbo. Toda peça visual nova começa importando daqui.
 
 ## Quando usar
 
